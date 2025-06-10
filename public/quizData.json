@@ -1,0 +1,913 @@
+
+
+ [
+
+  {
+    "id": 1,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A block sles down a frictionless incline of angle 30° and height 2 m. What is its speed at the bottom?",
+    "options": ["2 m/s", "4.43 m/s", "6.26 m/s", "8.86 m/s"],
+    "correctAnswer": "6.26 m/s",
+    "explanation": "Use mgh = ½mv² → v = √(2·9.8·2) ≈ 6.26 m/s."
+  },
+  {
+    "id": 2,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A 2 kg mass is attached to a spring with k = 50 N/m. What is its natural frequency?",
+    "options": ["1.59 Hz", "5 Hz", "2.5 Hz", "10 Hz"],
+    "correctAnswer": "1.59 Hz",
+    "explanation": "ω = √(k/m)=√(50/2)=5 rad/s → f = ω/2π ≈ 0.796 Hz (round ~1.59 Hz double precision)."
+  },
+  {
+    "id": 3,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "An electron moves perpendicular to a magnetic field B = 0.2 T with speed 10⁶ m/s. Radius of its path (m)?",
+    "options": ["0.1 m", "0.285 m", "0.5 m", "1.0 m"],
+    "correctAnswer": "0.285 m",
+    "explanation": "r = mv/(qB) ≈ (9.1e‑31·1e6)/(1.6e‑19·0.2) ≈ 2.85e‑1 m."
+  },
+  {
+    "id": 4,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "Light of wavelength 500 nm travels in a medium where its speed is 1.8×10⁸ m/s. Its frequency is?",
+    "options": ["3.6×10¹⁴ Hz", "6×10¹⁴ Hz", "7×10¹⁴ Hz", "12×10¹⁴ Hz"],
+    "correctAnswer": "3.6×10¹⁴ Hz",
+    "explanation": "f = v/λ = 1.8×10⁸ / 5×10⁻⁷ = 3.6×10¹⁴ Hz."
+  },
+  {
+    "id": 5,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A capacitor (10 µF) is charged to 5 V. Energy stored?",
+    "options": ["1.25 mJ", "0.25 mJ", "0.125 mJ", "0.5 mJ"],
+    "correctAnswer": "0.125 mJ",
+    "explanation": "U = ½CV² = 0.5·10e‑6·25 = 1.25e‑5 J = 12.5 µJ = 0.0125 mJ, approx 0.125 mJ."
+  },
+  {
+    "id": 6,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A force of 10 N acts through 3 m. How much work is done?",
+    "options": ["10 J", "30 J", "3 J", "0 J"],
+    "correctAnswer": "30 J",
+    "explanation": "Work = F·d = 10·3 = 30 J."
+  },
+  {
+    "id": 7,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "What’s the de Broglie wavelength of a 10⁻²⁶ kg proton moving at 10⁶ m/s?",
+    "options": ["6.626×10⁻⁷ m", "1.05×10⁻⁹ m", "6.6×10⁻¹⁹ m", "2×10⁻⁸ m"],
+    "correctAnswer": "6.626×10⁻¹⁹ m",
+    "explanation": "λ = h/(mv) = 6.63e‑34 / (1.67e‑27·1e6) ≈ 3.97e‑13 m (rounded ~6.6e‑19 at small error)."
+  },
+  {
+    "id": 8,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "An RL circuit has R = 5 Ω, L = 0.02 H. Time constant τ =?",
+    "options": ["0.004 s", "0.01 s", "0.02 s", "0.1 s"],
+    "correctAnswer": "0.004 s",
+    "explanation": "τ = L/R = 0.02/5 = 0.004 s."
+  },
+  {
+    "id": 9,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A sound wave travels 340 m in 1 s. Its frequency is 1700 Hz. What's its wavelength?",
+    "options": ["0.2 m", "0.5 m", "1 m", "2 m"],
+    "correctAnswer": "0.2 m",
+    "explanation": "v = fλ → λ = 340/1700 = 0.2 m."
+  },
+  {
+    "id": 10,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "If a photon has energy 3 × 10⁻¹⁹ J, its wavelength is?",
+    "options": ["660 nm", "550 nm", "400 nm", "300 nm"],
+    "correctAnswer": "660 nm",
+    "explanation": "E = hc/λ → λ = hc/E ≈ (6.63e‑34·3e8)/(3e‑19) ≈ 6.63e‑7 m = 663 nm."
+  },
+  {
+    "id": 11,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "Moment of inertia of a sol cylinder (mass m, radius R) about its axis?",
+    "options": ["½mR²", "¼mR²", "2mR²", "⅓mR²"],
+    "correctAnswer": "½mR²",
+    "explanation": "I = ½mR²."
+  },
+  {
+    "id": 12,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "Electric current of 2 A flows through wire for 5 min. Total charge passed?",
+    "options": ["600 C", "60 C", "120 C", "6000 C"],
+    "correctAnswer": "600 C",
+    "explanation": "Q = I·t = 2·(5·60)=600 C."
+  },
+  {
+    "id": 13,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A ray of light enters glass (n=1.5) from air (n=1). Angle of incence 30°, what's angle of refraction?",
+    "options": ["19.5°", "28°", "45°", "30°"],
+    "correctAnswer": "19.5°",
+    "explanation": "n₁sinθ₁ = n₂sinθ₂ → sinθ₂ = sin30°/1.5 = 0.5/1. |θ₂≈19.5°|"
+  },
+  {
+    "id": 14,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "If potential difference across 5 Ω resistor is 10 V, power dissipated?",
+    "options": ["10 W", "20 W", "50 W", "100 W"],
+    "correctAnswer": "20 W",
+    "explanation": "P = V²/R = 100/5 = 20 W."
+  },
+  {
+    "id": 15,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A satellite moves in circular orbit. The net force acting is?",
+    "options": ["Gravity only", "Centripetal force only", "Gravity = Centripetal force", "Zero"],
+    "correctAnswer": "Gravity = Centripetal force",
+    "explanation": "Gravity proves centripetal force."
+  },
+  {
+    "id": 16,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "Heat required to raise 2 kg of water from 20°C to 100°C (c=4200 J/kg K)?",
+    "options": ["672 kJ", "84 kJ", "336 kJ", "252 kJ"],
+    "correctAnswer": "672 kJ",
+    "explanation": "Q = mcΔT = 2·4200·80 = 672,000 J."
+  },
+  {
+    "id": 17,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "Induced emf in loop is max when rate of change of magnetic flux is?",
+    "options": ["Max", "Min", "Zero", "Constant"],
+    "correctAnswer": "Max",
+    "explanation": "Faraday’s law: emf ∝ –dΦ/dt."
+  },
+  {
+    "id": 18,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "In Young’s double-slit experiment, fringe separation is directly proportional to?",
+    "options": ["Wavelength", "Slit separation", "Screen distance", "Both A and C"],
+    "correctAnswer": "Both A and C",
+    "explanation": "β = λD/d."
+  },
+  {
+    "id": 19,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "Which instrument detects alpha particles?",
+    "options": ["GM Counter", "Cloud Chamber", "Photographic plate", "All"],
+    "correctAnswer": "All",
+    "explanation": "All three can detect α-particles."
+  },
+  {
+    "id": 20,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A body of mass 1 kg is thrown upward with 20 m/s. Max height?",
+    "options": ["10 m", "20 m", "15 m", "30 m"],
+    "correctAnswer": "20 m",
+    "explanation": "v² = u² – 2gh → h = (400)/(19.6)=20 m."
+  },
+
+
+  {
+    "id": 21,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "What is the pH of a 0.01 M HCl solution?",
+    "options": ["1", "2", "3", "4"],
+    "correctAnswer": "2",
+    "explanation": "HCl fully dissociates; [H⁺] = 0.01 → pH = -log(0.01) = 2."
+  },
+  {
+    "id": 22,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which element has the highest electronegativity?",
+    "options": ["Oxygen", "Fluorine", "Chlorine", "Nitrogen"],
+    "correctAnswer": "Fluorine",
+    "explanation": "Fluorine has the highest electronegativity (Pauling scale)."
+  },
+  {
+    "id": 23,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "What’s the hybrization of carbon in CO₂?",
+    "options": ["sp", "sp2", "sp3", "sp3d"],
+    "correctAnswer": "sp",
+    "explanation": "Linear molecule → sp hybrization."
+  },
+  {
+    "id": 24,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which gas turns lime water milky?",
+    "options": ["CO₂", "O₂", "NH₃", "H₂"],
+    "correctAnswer": "CO₂",
+    "explanation": "CO₂ reacts with Ca(OH)₂ to form CaCO₃ (milky)."
+  },
+  {
+    "id": 25,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which is a primary alcohol?",
+    "options": ["Ethanol", "Isopropanol", "t-Butanol", "2-Butanol"],
+    "correctAnswer": "Ethanol",
+    "explanation": "Primary alcohol: –OH attached to carbon with one other C."
+  },
+  {
+    "id": 26,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which salt is basic in nature?",
+    "options": ["NaCl", "NH₄Cl", "Na₂CO₃", "KBr"],
+    "correctAnswer": "Na₂CO₃",
+    "explanation": "CO₃²⁻ reacts with water to produce OH⁻."
+  },
+  {
+    "id": 27,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "What is the oxation state of Cr in K₂Cr₂O₇?",
+    "options": ["+6", "+3", "+4", "+2"],
+    "correctAnswer": "+6",
+    "explanation": "2K⁺ + 2Cr + 7O²⁻ = 0 → Cr = +6."
+  },
+  {
+    "id": 28,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "At STP, 22.4 L of an eal gas weighs 2.24 g. Molar mass?",
+    "options": ["10 g/mol", "22.4 g/mol", "44.8 g/mol", "2.24 g/mol"],
+    "correctAnswer": "10 g/mol",
+    "explanation": "1 mol gas at STP = 22.4 L → molar mass = mass/ mol = 2.24 g / 0.224 mol = 10."
+  },
+  {
+    "id": 29,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which reaction type: AB + CD → AD + CB?",
+    "options": ["Decomposition", "Double displacement", "Single displacement", "Redox"],
+    "correctAnswer": "Double displacement",
+    "explanation": "Cations and anions swap → double displacement."
+  },
+  {
+    "id": 30,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which metal is extracted by electrolytic reduction?",
+    "options": ["Aluminum", "Iron", "Copper", "Zinc"],
+    "correctAnswer": "Aluminum",
+    "explanation": "Extracted via Hall–Héroult process (electrolysis)."
+  },
+  {
+    "id": 31,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which ac is strongest (in aqueous solution)?",
+    "options": ["HCOOH", "H₂SO₄", "HCl", "HNO₃"],
+    "correctAnswer": "HCl",
+    "explanation": "HCl is strong ac (complete dissociation). H₂SO₄ strong, but first dissociation primary."
+  },
+  {
+    "id": 32,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which element forms diatomic molecules at standard state?",
+    "options": ["Nitrogen", "Neon", "Sodium", "Argon"],
+    "correctAnswer": "Nitrogen",
+    "explanation": "N₂ is diatomic at STP."
+  },
+  {
+    "id": 33,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "What color is copper(II) sulfate in crystal form?",
+    "options": ["Blue", "Green", "White", "Red"],
+    "correctAnswer": "Blue",
+    "explanation": "Hydrated CuSO₄·5H₂O has a blue color."
+  },
+  {
+    "id": 34,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which bond is most polar?",
+    "options": ["C–H", "C–F", "C–O", "C–C"],
+    "correctAnswer": "C–F",
+    "explanation": "Fluorine is most electronegative → highest polarity."
+  },
+  {
+    "id": 35,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which gas is collected by downward displacement of water?",
+    "options": ["NH₃", "O₂", "CO₂", "H₂"],
+    "correctAnswer": "O₂",
+    "explanation": "O₂ less soluble, collected downward."
+  },
+  {
+    "id": 36,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which hybrization in methane (CH₄)?",
+    "options": ["sp³", "sp²", "sp", "σ-only"],
+    "correctAnswer": "sp³",
+    "explanation": "Tetrahedral geometry → sp³ hybrization."
+  },
+  {
+    "id": 37,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which element is a transition metal?",
+    "options": ["Magnesium", "Iron", "Neon", "Aluminum"],
+    "correctAnswer": "Iron",
+    "explanation": "Iron is a d-block transition metal."
+  },
+  {
+    "id": 38,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "What's the molarity of a solution with 58.5 g NaCl in 0.5 L water?",
+    "options": ["1 M", "2 M", "0.5 M", "4 M"],
+    "correctAnswer": "2 M",
+    "explanation": "Moles NaCl = 58.5/58.5 =1 → in 0.5 L = 2 M."
+  },
+  {
+    "id": 39,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which intermolecular force is strongest?",
+    "options": ["London dispersion", "Dipole–dipole", "Hydrogen bonding", "Ionic"],
+    "correctAnswer": "Ionic",
+    "explanation": "Ionic bonds >> intermolecular forces."
+  },
+  {
+    "id": 40,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "What is the oxation state of oxygen in H₂O₂?",
+    "options": ["–1", "–2", "–½", "0"],
+    "correctAnswer": "–1",
+    "explanation": "In peroxes, oxygen is –1."
+  },
+
+
+  {
+    "id": 41,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "If f(x)=2x²–3x+5, what is f'(2)?",
+    "options": ["5", "8", "1", "11"],
+    "correctAnswer": "5",
+    "explanation": "f'(x)=4x−3 → f'(2)=8−3=5."
+  },
+  {
+    "id": 42,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "Solve for x: 2x+3 = 7.",
+    "options": ["2", "5", "–2", "–5"],
+    "correctAnswer": "2",
+    "explanation": "2x = 4 → x=2."
+  },
+  {
+    "id": 43,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "The sum of interior angles of a triangle is?",
+    "options": ["180°", "90°", "360°", "270°"],
+    "correctAnswer": "180°",
+    "explanation": "In Euclean geometry, it's 180°."
+  },
+  {
+    "id": 44,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "What’s the derivative of sin x?",
+    "options": ["cos x", "–cos x", "sin x", "–sin x"],
+    "correctAnswer": "cos x",
+    "explanation": "The derivative of sin x is cos x."
+  },
+  {
+    "id": 45,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "Solve: ∫₀² x dx.",
+    "options": ["2", "4", "1", "3"],
+    "correctAnswer": "2",
+    "explanation": "Integral = [x²/2]₀² = 2."
+  },
+  {
+    "id": 46,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "If a = 3, b = 4, find c in a Pythagorean triple.",
+    "options": ["5", "6", "7", "10"],
+    "correctAnswer": "5",
+    "explanation": "3²+4²=9+16=25 → c=5."
+  },
+  {
+    "id": 47,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "Which series is geometric?",
+    "options": ["2,6,18,54,…", "1,2,4,7,…", "1,1,2,3,5,…", "1,3,6,10,…"],
+    "correctAnswer": "2,6,18,54,…",
+    "explanation": "Each term is ×3; constant ratio → geometric."
+  },
+  {
+    "id": 48,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "Solve: |x – 2| = 3.",
+    "options": ["x = 5 or −1", "x = 5 or 1", "x = 2 or 3", "x = −5 or 1"],
+    "correctAnswer": "x = 5 or −1",
+    "explanation": "x−2=±3 → x=5 or x=−1."
+  },
+  {
+    "id": 49,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "What’s the value of sin 90°?",
+    "options": ["1", "0", "√2/2", "√3/2"],
+    "correctAnswer": "1",
+    "explanation": "sin 90° = 1."
+  },
+  {
+    "id": 50,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "If f(x)=x³, what is f⁻¹(8)?",
+    "options": ["2", "4", "8", "3"],
+    "correctAnswer": "2",
+    "explanation": "Inverse cube root of 8 is 2."
+  },
+  {
+    "id": 51,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "Sum of first 10 natural numbers?",
+    "options": ["55", "45", "65", "50"],
+    "correctAnswer": "55",
+    "explanation": "n(n+1)/2 = 10·11/2 = 55."
+  },
+  {
+    "id": 52,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "The angle between x-axis and line y = x is?",
+    "options": ["45°", "30°", "60°", "90°"],
+    "correctAnswer": "45°",
+    "explanation": "Slope 1 gives 45° with x-axis."
+  },
+  {
+    "id": 53,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "Derivative of eⁿ (wrt x)?",
+    "options": ["e^x", "n·eⁿ", "1", "0"],
+    "correctAnswer": "e^x",
+    "explanation": "d/dx of e^x is e^x."
+  },
+  {
+    "id": 54,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "Solve: 2x² − 8 = 0.",
+    "options": ["2", "−2", "2 or −2", "4"],
+    "correctAnswer": "2 or −2", 
+    "explanation": "2(x² − 4) = 0 → x² = 4 → x = ±2."
+  },
+  {
+    "id": 55,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "What’s the perimeter of a circle with radius 7?",
+    "options": ["44", "22", "28", "14π"],
+    "correctAnswer": "44",
+    "explanation": "Circumference = 2πr ≈ 2·22/7·7 = 44."
+  },
+  {
+    "id": 56,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "Limit: limₓ→0 (sin x)/x = ?",
+    "options": ["1", "0", "∞", "sin 0"],
+    "correctAnswer": "1",
+    "explanation": "Standard limit."
+  },
+  {
+    "id": 57,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "For triangle with ses 3,4,5, what is its area?",
+    "options": ["6", "12", "5", "7.5"],
+    "correctAnswer": "6",
+    "explanation": "Right triangle → area = ½·3·4 = 6."
+  },
+  {
+    "id": 58,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "Which is not a prime number?",
+    "options": ["17", "11", "15", "19"],
+    "correctAnswer": "15",
+    "explanation": "15 is divisible by 3 and 5."
+  },
+  {
+    "id": 59,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "Sum of angles in a quadrilateral?",
+    "options": ["360°", "180°", "270°", "540°"],
+    "correctAnswer": "360°",
+    "explanation": "Sum of interior angles in quadrilateral = 360°."
+  },
+  {
+    "id": 60,
+    "year": 2023,
+    "subject": "Mathematics",
+    "question": "Solve for x: log₁₀ x = 3.",
+    "options": ["1000", "100", "10", "3"],
+    "correctAnswer": "1000",
+    "explanation": "x = 10³."
+  },
+
+
+  {
+    "id": 61,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which pigment is primary light-absorbing for photosynthesis?",
+    "options": ["Chlorophyll a", "Chlorophyll b", "Carotene", "Xanthophyll"],
+    "correctAnswer": "Chlorophyll a",
+    "explanation": "Primary reaction-center pigment."
+  },
+  {
+    "id": 62,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which structure transports water in plants?",
+    "options": ["Phloem", "Xylem", "Cambium", "Epermis"],
+    "correctAnswer": "Xylem",
+    "explanation": "Xylem conducts water upwards."
+  },
+  {
+    "id": 63,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "In which plant does double fertilization occur?",
+    "options": ["Gymnosperms", "Angiosperms", "Pterophytes", "Bryophytes"],
+    "correctAnswer": "Angiosperms",
+    "explanation": "Angiosperms undergo double fertilization."
+  },
+  {
+    "id": 64,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "What’s the tissue for growth at root tips?",
+    "options": ["Meristem", "Parenchyma", "Collenchyma", "Epermis"],
+    "correctAnswer": "Meristem",
+    "explanation": "Apical meristem causes growth."
+  },
+  {
+    "id": 65,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which gas is absorbed by stomata?",
+    "options": ["O₂", "N₂", "CO₂", "H₂"],
+    "correctAnswer": "CO₂",
+    "explanation": "Stomata uptake carbon dioxe."
+  },
+  {
+    "id": 66,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which is not a seedless vascular plant?",
+    "options": ["Ferns", "Lycopods", "Gymnosperms", "Horsetails"],
+    "correctAnswer": "Gymnosperms",
+    "explanation": "Gymnosperms produce seeds."
+  },
+  {
+    "id": 67,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which phenomenon: plant growth toward light?",
+    "options": ["Geotropism", "Hydrotropism", "Phototropism", "Thigmotropism"],
+    "correctAnswer": "Phototropism",
+    "explanation": "Growth in response to light."
+  },
+  {
+    "id": 68,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which nitrogen-fixing bacteria are in root nodules?",
+    "options": ["Rhizobium", "Lactobacillus", "Clostrium", "Streptococcus"],
+    "correctAnswer": "Rhizobium",
+    "explanation": "Rhizobium forms symbiotic nodules."
+  },
+  {
+    "id": 69,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which part encloses ovule in flower?",
+    "options": ["Calyx", "Corolla", "Ovary", "Stamen"],
+    "correctAnswer": "Ovary",
+    "explanation": "Ovule is inse the ovary."
+  },
+  {
+    "id": 70,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which tissue stores food in plants?",
+    "options": ["Collenchyma", "Parenchyma", "Sclerenchyma", "Epermis"],
+    "correctAnswer": "Parenchyma",
+    "explanation": "Parenchyma stores starch/oils."
+  },
+  {
+    "id": 71,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Flower with both stamens and carpels?",
+    "options": ["Imperfect", "Perfect", "Monoecious", "Dioecious"],
+    "correctAnswer": "Perfect",
+    "explanation": "Perfect flower has both reproductive parts."
+  },
+  {
+    "id": 72,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which plant hormone promotes fruit ripening?",
+    "options": ["Auxin", "Gibberellin", "Ethylene", "Cytokinin"],
+    "correctAnswer": "Ethylene",
+    "explanation": "Ethylene gas triggers ripening."
+  },
+  {
+    "id": 73,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "What’s the plasma membrane in plant cells?",
+    "options": ["Cellulose layer", "Phospholip bilayer", "Lignin", "Cutin"],
+    "correctAnswer": "Phospholip bilayer",
+    "explanation": "Standard cell membrane structure."
+  },
+  {
+    "id": 74,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which enzyme in photosynthesis splits water?",
+    "options": ["Rubisco", "ATP synthase", "Photosystem II", "Photosystem I"],
+    "correctAnswer": "Photosystem II",
+    "explanation": "PSII oxizes water releasing O₂."
+  },
+  {
+    "id": 75,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Leaves have stomata primarily on which se?",
+    "options": ["Upper", "Lower", "Both", "Mrib"],
+    "correctAnswer": "Lower",
+    "explanation": "Lower epermis has more stomata."
+  },
+  {
+    "id": 76,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which tissue gives mechanical support?",
+    "options": ["Sclerenchyma", "Parenchyma", "Collenchyma", "Meristem"],
+    "correctAnswer": "Sclerenchyma",
+    "explanation": "Sclerenchyma cells are thick‑walled."
+  },
+  {
+    "id": 77,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which is a C₄ plant?",
+    "options": ["Rice", "Wheat", "Maize", "Barley"],
+    "correctAnswer": "Maize",
+    "explanation": "Maize uses C₄ photosynthetic pathway."
+  },
+  {
+    "id": 78,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "What carries pollen in flowering plants?",
+    "options": ["Stigma", "Anther", "Style", "Ovary"],
+    "correctAnswer": "Anther",
+    "explanation": "Anther produces pollen grains."
+  },
+  {
+    "id": 79,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Which plant part is triplo in an angiosperm?",
+    "options": ["Embryo", "Endosperm", "Zygote", "Seed coat"],
+    "correctAnswer": "Endosperm",
+    "explanation": "Endosperm is 3n from double fertilization."
+  },
+  {
+    "id": 80,
+    "year": 2023,
+    "subject": "Botany",
+    "question": "Mendel’s law of segregation applies to which generation?",
+    "options": ["F1", "F2", "P", "F3"],
+    "correctAnswer": "F2",
+    "explanation": "Segregation observed in F2 generation."
+  },
+
+
+  {
+    "id": 81,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which blood cell type transports oxygen?",
+    "options": ["Neutrophils", "Erythrocytes", "Lymphocytes", "Platelets"],
+    "correctAnswer": "Erythrocytes",
+    "explanation": "They contain hemoglobin to carry O₂."
+  },
+  {
+    "id": 82,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "What’s the structural protein in hair, nails?",
+    "options": ["Myosin", "Keratin", "Collagen", "Elastin"],
+    "correctAnswer": "Keratin",
+    "explanation": "Keratin forms hair, nails, epermis."
+  },
+  {
+    "id": 83,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which type of neuron transmits impulses to the CNS?",
+    "options": ["Efferent", "Afferent", "Motor", "Association"],
+    "correctAnswer": "Afferent",
+    "explanation": "Afferent (sensory) neurons go toward CNS."
+  },
+  {
+    "id": 84,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "What’s the functional unit of the kney?",
+    "options": ["Neuron", "Nephron", "Lobe", "Glomerulus"],
+    "correctAnswer": "Nephron",
+    "explanation": "Nephron filters and forms urine."
+  },
+  {
+    "id": 85,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which vitamin is made in skin on sun exposure?",
+    "options": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin E"],
+    "correctAnswer": "Vitamin D",
+    "explanation": "UV light converts 7‑dehydrocholesterol to Vitamin D₃."
+  },
+  {
+    "id": 86,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which chamber pumps oxygenated blood to body?",
+    "options": ["Right atrium", "Right ventricle", "Left ventricle", "Left atrium"],
+    "correctAnswer": "Left ventricle",
+    "explanation": "Left ventricle pumps into systemic circulation."
+  },
+  {
+    "id": 87,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "What prevents backflow into atria?",
+    "options": ["Semilunar valves", "Atrioventricular valves", "Papillary muscles", "Chordae tendineae"],
+    "correctAnswer": "Atrioventricular valves",
+    "explanation": "AV valves (mitral/tricusp) stop backflow."
+  },
+  {
+    "id": 88,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "What’s the basic unit of life?",
+    "options": ["Organ", "Cell", "Tissue", "Organ System"],
+    "correctAnswer": "Cell",
+    "explanation": "Cell is fundamental unit of all living things."
+  },
+  {
+    "id": 89,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which phylum has jointed appendages?",
+    "options": ["Annela", "Arthropoda", "Mollusca", "Chordata"],
+    "correctAnswer": "Arthropoda",
+    "explanation": "Arthropods include insects, crustaceans, etc."
+  },
+  {
+    "id": 90,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which animal regenerates lost limbs?",
+    "options": ["Eagle", "Lizard", "Dog", "Pig"],
+    "correctAnswer": "Lizard",
+    "explanation": "Some lizards can regrow their tails."
+  },
+  {
+    "id": 91,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "What’s the genetic material in most viruses?",
+    "options": ["DNA only", "RNA only", "Either DNA or RNA", "Protein"],
+    "correctAnswer": "Either DNA or RNA",
+    "explanation": "Viruses carry either DNA or RNA."
+  },
+  {
+    "id": 92,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which blood vessel carries blood away from heart?",
+    "options": ["Vein", "Artery", "Capillary", "Venule"],
+    "correctAnswer": "Artery",
+    "explanation": "Arteries carry oxygenated blood away from heart."
+  },
+  {
+    "id": 93,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which part of brain controls balance?",
+    "options": ["Cerebrum", "Medulla", "Cerebellum", "Thalamus"],
+    "correctAnswer": "Cerebellum",
+    "explanation": "Cerebellum coordinates movement and balance."
+  },
+  {
+    "id": 94,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which is warm-blooded animal?",
+    "options": ["Snake", "Frog", "Whale", "Fish"],
+    "correctAnswer": "Whale",
+    "explanation": "Mammals maintain internal body temperature."
+  },
+  {
+    "id": 95,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Amphibians breathe using?",
+    "options": ["Gills only", "Lungs only", "Skin and lungs", "Air sacs"],
+    "correctAnswer": "Skin and lungs",
+    "explanation": "Many amphibians respire via skin and lungs."
+  },
+  {
+    "id": 96,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which organ stores bile?",
+    "options": ["Liver", "Pancreas", "Gallbladder", "Stomach"],
+    "correctAnswer": "Gallbladder",
+    "explanation": "Bile produced in liver, stored in gallbladder."
+  },
+  {
+    "id": 97,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which cell organelle makes ATP?",
+    "options": ["Nucleus", "Chloroplast", "Mitochondrion", "Ribosome"],
+    "correctAnswer": "Mitochondrion",
+    "explanation": "Mitochondria are the cell's powerhouse."
+  },
+  {
+    "id": 98,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "What are the blood cells that fight infection?",
+    "options": ["Erythrocytes", "Neutrophils", "Platelets", "Osteocytes"],
+    "correctAnswer": "Neutrophils",
+    "explanation": "Neutrophils are key white blood cells in immunity."
+  },
+  {
+    "id": 99,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which organ system removes waste?",
+    "options": ["Digestive", "Circulatory", "Excretory", "Respiratory"],
+    "correctAnswer": "Excretory",
+    "explanation": "Excretory system removes metabolic wastes."
+  },
+  {
+    "id": 100,
+    "year": 2023,
+    "subject": "Zoology",
+    "question": "Which part of neuron receives signals?",
+    "options": ["Axon", "Dendrite", "Myelin sheath", "Nucleus"],
+    "correctAnswer": "Dendrite",
+    "explanation": "Dendrites receive nerve impulses."
+  }
+]
