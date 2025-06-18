@@ -1,0 +1,182 @@
+[
+ {
+    "id": 21,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "What is the pH of a 0.01 M HCl solution?",
+    "options": ["1", "2", "3", "4"],
+    "correctAnswer": "2",
+    "explanation": "HCl fully dissociates; [H⁺] = 0.01 → pH = -log(0.01) = 2."
+  },
+  {
+    "id": 22,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which element has the highest electronegativity?",
+    "options": ["Oxygen", "Fluorine", "Chlorine", "Nitrogen"],
+    "correctAnswer": "Fluorine",
+    "explanation": "Fluorine has the highest electronegativity (Pauling scale)."
+  },
+  {
+    "id": 23,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "What’s the hybrization of carbon in CO₂?",
+    "options": ["sp", "sp2", "sp3", "sp3d"],
+    "correctAnswer": "sp",
+    "explanation": "Linear molecule → sp hybrization."
+  },
+  {
+    "id": 24,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which gas turns lime water milky?",
+    "options": ["CO₂", "O₂", "NH₃", "H₂"],
+    "correctAnswer": "CO₂",
+    "explanation": "CO₂ reacts with Ca(OH)₂ to form CaCO₃ (milky)."
+  },
+  {
+    "id": 25,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which is a primary alcohol?",
+    "options": ["Ethanol", "Isopropanol", "t-Butanol", "2-Butanol"],
+    "correctAnswer": "Ethanol",
+    "explanation": "Primary alcohol: –OH attached to carbon with one other C."
+  },
+  {
+    "id": 26,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which salt is basic in nature?",
+    "options": ["NaCl", "NH₄Cl", "Na₂CO₃", "KBr"],
+    "correctAnswer": "Na₂CO₃",
+    "explanation": "CO₃²⁻ reacts with water to produce OH⁻."
+  },
+  {
+    "id": 27,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "What is the oxation state of Cr in K₂Cr₂O₇?",
+    "options": ["+6", "+3", "+4", "+2"],
+    "correctAnswer": "+6",
+    "explanation": "2K⁺ + 2Cr + 7O²⁻ = 0 → Cr = +6."
+  },
+  {
+    "id": 28,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "At STP, 22.4 L of an eal gas weighs 2.24 g. Molar mass?",
+    "options": ["10 g/mol", "22.4 g/mol", "44.8 g/mol", "2.24 g/mol"],
+    "correctAnswer": "10 g/mol",
+    "explanation": "1 mol gas at STP = 22.4 L → molar mass = mass/ mol = 2.24 g / 0.224 mol = 10."
+  },
+  {
+    "id": 29,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which reaction type: AB + CD → AD + CB?",
+    "options": ["Decomposition", "Double displacement", "Single displacement", "Redox"],
+    "correctAnswer": "Double displacement",
+    "explanation": "Cations and anions swap → double displacement."
+  },
+  {
+    "id": 30,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which metal is extracted by electrolytic reduction?",
+    "options": ["Aluminum", "Iron", "Copper", "Zinc"],
+    "correctAnswer": "Aluminum",
+    "explanation": "Extracted via Hall–Héroult process (electrolysis)."
+  },
+  {
+    "id": 31,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which ac is strongest (in aqueous solution)?",
+    "options": ["HCOOH", "H₂SO₄", "HCl", "HNO₃"],
+    "correctAnswer": "HCl",
+    "explanation": "HCl is strong ac (complete dissociation). H₂SO₄ strong, but first dissociation primary."
+  },
+  {
+    "id": 32,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which element forms diatomic molecules at standard state?",
+    "options": ["Nitrogen", "Neon", "Sodium", "Argon"],
+    "correctAnswer": "Nitrogen",
+    "explanation": "N₂ is diatomic at STP."
+  },
+  {
+    "id": 33,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "What color is copper(II) sulfate in crystal form?",
+    "options": ["Blue", "Green", "White", "Red"],
+    "correctAnswer": "Blue",
+    "explanation": "Hydrated CuSO₄·5H₂O has a blue color."
+  },
+  {
+    "id": 34,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which bond is most polar?",
+    "options": ["C–H", "C–F", "C–O", "C–C"],
+    "correctAnswer": "C–F",
+    "explanation": "Fluorine is most electronegative → highest polarity."
+  },
+  {
+    "id": 35,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which gas is collected by downward displacement of water?",
+    "options": ["NH₃", "O₂", "CO₂", "H₂"],
+    "correctAnswer": "O₂",
+    "explanation": "O₂ less soluble, collected downward."
+  },
+  {
+    "id": 36,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which hybrization in methane (CH₄)?",
+    "options": ["sp³", "sp²", "sp", "σ-only"],
+    "correctAnswer": "sp³",
+    "explanation": "Tetrahedral geometry → sp³ hybrization."
+  },
+  {
+    "id": 37,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which element is a transition metal?",
+    "options": ["Magnesium", "Iron", "Neon", "Aluminum"],
+    "correctAnswer": "Iron",
+    "explanation": "Iron is a d-block transition metal."
+  },
+  {
+    "id": 38,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "What's the molarity of a solution with 58.5 g NaCl in 0.5 L water?",
+    "options": ["1 M", "2 M", "0.5 M", "4 M"],
+    "correctAnswer": "2 M",
+    "explanation": "Moles NaCl = 58.5/58.5 =1 → in 0.5 L = 2 M."
+  },
+  {
+    "id": 39,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "Which intermolecular force is strongest?",
+    "options": ["London dispersion", "Dipole–dipole", "Hydrogen bonding", "Ionic"],
+    "correctAnswer": "Ionic",
+    "explanation": "Ionic bonds >> intermolecular forces."
+  },
+  {
+    "id": 40,
+    "year": 2023,
+    "subject": "Chemistry",
+    "question": "What is the oxation state of oxygen in H₂O₂?",
+    "options": ["–1", "–2", "–½", "0"],
+    "correctAnswer": "–1",
+    "explanation": "In peroxes, oxygen is –1."
+  }
+]

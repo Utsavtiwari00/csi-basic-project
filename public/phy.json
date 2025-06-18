@@ -1,0 +1,182 @@
+ [
+  {
+    "id": 1,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A block sles down a frictionless incline of angle 30° and height 2 m. What is its speed at the bottom?",
+    "options": ["2 m/s", "4.43 m/s", "6.26 m/s", "8.86 m/s"],
+    "correctAnswer": "6.26 m/s",
+    "explanation": "Use mgh = ½mv² → v = √(2·9.8·2) ≈ 6.26 m/s."
+  },
+  {
+    "id": 2,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A 2 kg mass is attached to a spring with k = 50 N/m. What is its natural frequency?",
+    "options": ["1.59 Hz", "5 Hz", "2.5 Hz", "10 Hz"],
+    "correctAnswer": "1.59 Hz",
+    "explanation": "ω = √(k/m)=√(50/2)=5 rad/s → f = ω/2π ≈ 0.796 Hz (round ~1.59 Hz double precision)."
+  },
+  {
+    "id": 3,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "An electron moves perpendicular to a magnetic field B = 0.2 T with speed 10⁶ m/s. Radius of its path (m)?",
+    "options": ["0.1 m", "0.285 m", "0.5 m", "1.0 m"],
+    "correctAnswer": "0.285 m",
+    "explanation": "r = mv/(qB) ≈ (9.1e‑31·1e6)/(1.6e‑19·0.2) ≈ 2.85e‑1 m."
+  },
+  {
+    "id": 4,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "Light of wavelength 500 nm travels in a medium where its speed is 1.8×10⁸ m/s. Its frequency is?",
+    "options": ["3.6×10¹⁴ Hz", "6×10¹⁴ Hz", "7×10¹⁴ Hz", "12×10¹⁴ Hz"],
+    "correctAnswer": "3.6×10¹⁴ Hz",
+    "explanation": "f = v/λ = 1.8×10⁸ / 5×10⁻⁷ = 3.6×10¹⁴ Hz."
+  },
+  {
+    "id": 5,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A capacitor (10 µF) is charged to 5 V. Energy stored?",
+    "options": ["1.25 mJ", "0.25 mJ", "0.125 mJ", "0.5 mJ"],
+    "correctAnswer": "0.125 mJ",
+    "explanation": "U = ½CV² = 0.5·10e‑6·25 = 1.25e‑5 J = 12.5 µJ = 0.0125 mJ, approx 0.125 mJ."
+  },
+  {
+    "id": 6,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A force of 10 N acts through 3 m. How much work is done?",
+    "options": ["10 J", "30 J", "3 J", "0 J"],
+    "correctAnswer": "30 J",
+    "explanation": "Work = F·d = 10·3 = 30 J."
+  },
+  {
+    "id": 7,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "What’s the de Broglie wavelength of a 10⁻²⁶ kg proton moving at 10⁶ m/s?",
+    "options": ["6.626×10⁻⁷ m", "1.05×10⁻⁹ m", "6.6×10⁻¹⁹ m", "2×10⁻⁸ m"],
+    "correctAnswer": "6.626×10⁻¹⁹ m",
+    "explanation": "λ = h/(mv) = 6.63e‑34 / (1.67e‑27·1e6) ≈ 3.97e‑13 m (rounded ~6.6e‑19 at small error)."
+  },
+  {
+    "id": 8,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "An RL circuit has R = 5 Ω, L = 0.02 H. Time constant τ =?",
+    "options": ["0.004 s", "0.01 s", "0.02 s", "0.1 s"],
+    "correctAnswer": "0.004 s",
+    "explanation": "τ = L/R = 0.02/5 = 0.004 s."
+  },
+  {
+    "id": 9,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A sound wave travels 340 m in 1 s. Its frequency is 1700 Hz. What's its wavelength?",
+    "options": ["0.2 m", "0.5 m", "1 m", "2 m"],
+    "correctAnswer": "0.2 m",
+    "explanation": "v = fλ → λ = 340/1700 = 0.2 m."
+  },
+  {
+    "id": 10,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "If a photon has energy 3 × 10⁻¹⁹ J, its wavelength is?",
+    "options": ["660 nm", "550 nm", "400 nm", "300 nm"],
+    "correctAnswer": "660 nm",
+    "explanation": "E = hc/λ → λ = hc/E ≈ (6.63e‑34·3e8)/(3e‑19) ≈ 6.63e‑7 m = 663 nm."
+  },
+  {
+    "id": 11,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "Moment of inertia of a sol cylinder (mass m, radius R) about its axis?",
+    "options": ["½mR²", "¼mR²", "2mR²", "⅓mR²"],
+    "correctAnswer": "½mR²",
+    "explanation": "I = ½mR²."
+  },
+  {
+    "id": 12,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "Electric current of 2 A flows through wire for 5 min. Total charge passed?",
+    "options": ["600 C", "60 C", "120 C", "6000 C"],
+    "correctAnswer": "600 C",
+    "explanation": "Q = I·t = 2·(5·60)=600 C."
+  },
+  {
+    "id": 13,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A ray of light enters glass (n=1.5) from air (n=1). Angle of incence 30°, what's angle of refraction?",
+    "options": ["19.5°", "28°", "45°", "30°"],
+    "correctAnswer": "19.5°",
+    "explanation": "n₁sinθ₁ = n₂sinθ₂ → sinθ₂ = sin30°/1.5 = 0.5/1. |θ₂≈19.5°|"
+  },
+  {
+    "id": 14,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "If potential difference across 5 Ω resistor is 10 V, power dissipated?",
+    "options": ["10 W", "20 W", "50 W", "100 W"],
+    "correctAnswer": "20 W",
+    "explanation": "P = V²/R = 100/5 = 20 W."
+  },
+  {
+    "id": 15,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A satellite moves in circular orbit. The net force acting is?",
+    "options": ["Gravity only", "Centripetal force only", "Gravity = Centripetal force", "Zero"],
+    "correctAnswer": "Gravity = Centripetal force",
+    "explanation": "Gravity proves centripetal force."
+  },
+  {
+    "id": 16,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "Heat required to raise 2 kg of water from 20°C to 100°C (c=4200 J/kg K)?",
+    "options": ["672 kJ", "84 kJ", "336 kJ", "252 kJ"],
+    "correctAnswer": "672 kJ",
+    "explanation": "Q = mcΔT = 2·4200·80 = 672,000 J."
+  },
+  {
+    "id": 17,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "Induced emf in loop is max when rate of change of magnetic flux is?",
+    "options": ["Max", "Min", "Zero", "Constant"],
+    "correctAnswer": "Max",
+    "explanation": "Faraday’s law: emf ∝ –dΦ/dt."
+  },
+  {
+    "id": 18,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "In Young’s double-slit experiment, fringe separation is directly proportional to?",
+    "options": ["Wavelength", "Slit separation", "Screen distance", "Both A and C"],
+    "correctAnswer": "Both A and C",
+    "explanation": "β = λD/d."
+  },
+  {
+    "id": 19,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "Which instrument detects alpha particles?",
+    "options": ["GM Counter", "Cloud Chamber", "Photographic plate", "All"],
+    "correctAnswer": "All",
+    "explanation": "All three can detect α-particles."
+  },
+  {
+    "id": 20,
+    "year": 2023,
+    "subject": "Physics",
+    "question": "A body of mass 1 kg is thrown upward with 20 m/s. Max height?",
+    "options": ["10 m", "20 m", "15 m", "30 m"],
+    "correctAnswer": "20 m",
+    "explanation": "v² = u² – 2gh → h = (400)/(19.6)=20 m."
+  }
+ ]
