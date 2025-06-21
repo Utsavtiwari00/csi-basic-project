@@ -1,0 +1,282 @@
+[
+  {
+    "id": "81",
+    "question": "Which blood cell type transports oxygen?",
+    "options": [
+      "Neutrophils",
+      "Erythrocytes",
+      "Lymphocytes",
+      "Platelets"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "They contain hemoglobin to carry O₂."
+  },
+  {
+    "id": "82",
+    "question": "What’s the structural protein in hair, nails?",
+    "options": [
+      "Myosin",
+      "Keratin",
+      "Collagen",
+      "Elastin"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Keratin forms hair, nails, epermis."
+  },
+  {
+    "id": "83",
+    "question": "Which type of neuron transmits impulses to the CNS?",
+    "options": [
+      "Efferent",
+      "Afferent",
+      "Motor",
+      "Association"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Afferent (sensory) neurons go toward CNS."
+  },
+  {
+    "id": "84",
+    "question": "What’s the functional unit of the kney?",
+    "options": [
+      "Neuron",
+      "Nephron",
+      "Lobe",
+      "Glomerulus"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Nephron filters and forms urine."
+  },
+  {
+    "id": "85",
+    "question": "Which vitamin is made in skin on sun exposure?",
+    "options": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin D",
+      "Vitamin E"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "UV light converts 7‑dehydrocholesterol to Vitamin D₃."
+  },
+  {
+    "id": "86",
+    "question": "Which chamber pumps oxygenated blood to body?",
+    "options": [
+      "Right atrium",
+      "Right ventricle",
+      "Left ventricle",
+      "Left atrium"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Left ventricle pumps into systemic circulation."
+  },
+  {
+    "id": "87",
+    "question": "What prevents backflow into atria?",
+    "options": [
+      "Semilunar valves",
+      "Atrioventricular valves",
+      "Papillary muscles",
+      "Chordae tendineae"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "AV valves (mitral/tricusp) stop backflow."
+  },
+  {
+    "id": "88",
+    "question": "What’s the basic unit of life?",
+    "options": [
+      "Organ",
+      "Cell",
+      "Tissue",
+      "Organ System"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Cell is fundamental unit of all living things."
+  },
+  {
+    "id": "89",
+    "question": "Which phylum has jointed appendages?",
+    "options": [
+      "Annela",
+      "Arthropoda",
+      "Mollusca",
+      "Chordata"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Arthropods include insects, crustaceans, etc."
+  },
+  {
+    "id": "90",
+    "question": "Which animal regenerates lost limbs?",
+    "options": [
+      "Eagle",
+      "Lizard",
+      "Dog",
+      "Pig"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Some lizards can regrow their tails."
+  },
+  {
+    "id": "91",
+    "question": "What’s the genetic material in most viruses?",
+    "options": [
+      "DNA only",
+      "RNA only",
+      "Either DNA or RNA",
+      "Protein"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Viruses carry either DNA or RNA."
+  },
+  {
+    "id": "92",
+    "question": "Which blood vessel carries blood away from heart?",
+    "options": [
+      "Vein",
+      "Artery",
+      "Capillary",
+      "Venule"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Arteries carry oxygenated blood away from heart."
+  },
+  {
+    "id": "93",
+    "question": "Which part of brain controls balance?",
+    "options": [
+      "Cerebrum",
+      "Medulla",
+      "Cerebellum",
+      "Thalamus"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Cerebellum coordinates movement and balance."
+  },
+  {
+    "id": "94",
+    "question": "Which is warm-blooded animal?",
+    "options": [
+      "Snake",
+      "Frog",
+      "Whale",
+      "Fish"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Mammals maintain internal body temperature."
+  },
+  {
+    "id": "95",
+    "question": "Amphibians breathe using?",
+    "options": [
+      "Gills only",
+      "Lungs only",
+      "Skin and lungs",
+      "Air sacs"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Many amphibians respire via skin and lungs."
+  },
+  {
+    "id": "96",
+    "question": "Which organ stores bile?",
+    "options": [
+      "Liver",
+      "Pancreas",
+      "Gallbladder",
+      "Stomach"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Bile produced in liver, stored in gallbladder."
+  },
+  {
+    "id": "97",
+    "question": "Which cell organelle makes ATP?",
+    "options": [
+      "Nucleus",
+      "Chloroplast",
+      "Mitochondrion",
+      "Ribosome"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Mitochondria are the cell's powerhouse."
+  },
+  {
+    "id": "98",
+    "question": "What are the blood cells that fight infection?",
+    "options": [
+      "Erythrocytes",
+      "Neutrophils",
+      "Platelets",
+      "Osteocytes"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Neutrophils are key white blood cells in immunity."
+  },
+  {
+    "id": "99",
+    "question": "Which organ system removes waste?",
+    "options": [
+      "Digestive",
+      "Circulatory",
+      "Excretory",
+      "Respiratory"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Excretory system removes metabolic wastes."
+  },
+  {
+    "id": "100",
+    "question": "Which part of neuron receives signals?",
+    "options": [
+      "Axon",
+      "Dendrite",
+      "Myelin sheath",
+      "Nucleus"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Dendrites receive nerve impulses."
+  }
+]

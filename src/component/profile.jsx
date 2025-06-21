@@ -1,83 +1,129 @@
-import React from 'react';
-import { X, User, Zap, Hash, LogOut, Settings } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { X, Zap, Hash, LogOut, Settings } from 'lucide-react';
 import { signOut } from 'firebase/auth';
 import { auth } from "../../firebase/firebase";
 import { useNavigate } from 'react-router-dom';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../firebase/firebase';
 
-const Profile = ({ isVisible, onClose, accuracy, UserName, quesNo }) => {
+const Profile = ({ isVisible, onClose }) => {
   const navigate = useNavigate();
+  const [userName, setUserName] = useState("");
+  const [isLightMode, setIsLightMode] = useState(
+    localStorage.getItem("theme") === "light"
+  );
+  const [questionCount, setQuestionCount] = useState(0);
+  const [accuracy, setAccuracy] = useState(0);
 
-  if (!isVisible) {
-    return null; 
-  }
+  
+
+  useEffect(() => {
+  const fetchUserData = async () => {
+    const user = auth.currentUser;
+    if (user) {
+      const userRef = doc(db, "users", user.uid);
+      const userDoc = await getDoc(userRef);
+
+      if (userDoc.exists()) {
+        const userData = userDoc.data();
+        setUserName(userData.displayName || user.email.split("@")[0]);
+
+        const attempted = userData.totalAttempted || 0;
+        const correct = userData.totalCorrect || 0;
+
+        setQuestionCount(attempted);
+        const calculatedAccuracy = attempted ? ((correct / attempted) * 100).toFixed(1) : 0;
+        setAccuracy(calculatedAccuracy);
+      } else {
+        setUserName(user.email.split("@")[0]);
+        setQuestionCount(0);
+        setAccuracy(0);
+      }
+    }
+  };
+
+  fetchUserData();
+}, []);
+
+
+  if (!isVisible) return null;
 
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      onClose(); 
-      navigate("/SignIn"); 
+      onClose();
+      navigate("/SignIn");
     } catch (error) {
       console.error("Error logging out:", error);
-     
     }
   };
 
-    const toSettings = () => {
+  const toSettings = () => {
     navigate('/settings');
   };
 
+  const bgMain = isLightMode ? "bg-white" : "bg-gray-800";
+  const textMain = isLightMode ? "text-black" : "text-white";
+  const textSecondary = isLightMode ? "text-gray-600" : "text-gray-400";
+  const bgCard = isLightMode ? "bg-gray-100" : "bg-gray-700";
+  const hoverBg = isLightMode ? "hover:bg-gray-200" : "hover:bg-gray-700";
+
   return (
     <div
-      className="fixed inset-0  bg-opacity-70 z-50 flex items-center justify-center p-4"
-      onClick={onClose} 
+      className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      onClick={onClose}
     >
-  
       <div
-        className="relative bg-gray-800 rounded-xl p-8 shadow-2xl w-full max-w-sm"
-        onClick={(e) => e.stopPropagation()} // Prevent clicks inside the card from closing the modal
+        className={`relative ${bgMain} ${textMain} rounded-xl p-8 shadow-2xl w-full max-w-sm`}
+        onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+          className={`absolute top-4 right-4 ${textSecondary} hover:${textMain} transition-colors`}
           aria-label="Close profile"
         >
           <X className="w-6 h-6" />
         </button>
 
         <div className="flex flex-col items-center mb-6">
-          <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center text-5xl font-bold mb-4 border-4 border-blue-400">
-            {UserName ? UserName[0].toUpperCase() : 'G'}
+          <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center text-5xl font-bold mb-4 border-4 border-blue-400 text-white">
+            {userName ? userName[0].toUpperCase() : 'G'}
           </div>
-          <h2 className="text-2xl font-bold text-white">{UserName}</h2>
-          <p className="text-gray-400 text-sm">{auth.currentUser ? auth.currentUser.email : 'guest@example.com'}</p>
+          <h2 className="text-2xl font-bold">{userName}</h2>
+          <p className={`text-sm ${textSecondary}`}>
+            {auth.currentUser ? auth.currentUser.email : 'guest@example.com'}
+          </p>
         </div>
 
         <div className="space-y-4 mb-6">
-          <div className="flex items-center justify-between bg-gray-700 p-3 rounded-lg">
+          <div className={`flex items-center justify-between ${bgCard} p-3 rounded-lg`}>
             <div className="flex items-center space-x-3">
               <Zap className="text-yellow-400 w-5 h-5" />
-              <span className="text-gray-300">Accuracy</span>
+              <span className={textSecondary}>Accuracy</span>
             </div>
-            <span className="font-semibold text-white">{accuracy}%</span>
+            <span className="font-semibold">{accuracy}%</span>
           </div>
 
-          <div className="flex items-center justify-between bg-gray-700 p-3 rounded-lg">
+          <div className={`flex items-center justify-between ${bgCard} p-3 rounded-lg`}>
             <div className="flex items-center space-x-3">
-              <Hash className="text-purple-400 w-5 h-5" />
-              <span className="text-gray-300">Questions Attempted</span>
+              <Hash className="text-purple-500 w-5 h-5" />
+              <span className={textSecondary}>Questions Attempted</span>
             </div>
-            <span className="font-semibold text-white">{quesNo}</span>
+            <span className="font-semibold">{questionCount}</span>
           </div>
         </div>
 
         <div className="space-y-2">
-          <button onClick={toSettings} className="w-full flex items-center space-x-3 p-3 rounded-lg text-left text-gray-300 hover:bg-gray-700 transition-colors">
+          <button
+            onClick={toSettings}
+            className={`w-full flex items-center space-x-3 p-3 rounded-lg text-left ${textSecondary} ${hoverBg} transition-colors`}
+          >
             <Settings className="w-5 h-5" />
             <span>Settings</span>
           </button>
           <button
             onClick={handleLogout}
-            className="w-full flex items-center space-x-3 p-3 rounded-lg text-left text-red-400 hover:bg-gray-700 transition-colors"
+            className={`w-full flex items-center space-x-3 p-3 rounded-lg text-left text-red-500 ${hoverBg} transition-colors`}
           >
             <LogOut className="w-5 h-5" />
             <span>Logout</span>

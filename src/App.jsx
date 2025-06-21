@@ -1,10 +1,11 @@
 import React from 'react'
-import Landingpage from './component/Landingpage'
 import QuizPage from './component/QuizPage'
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom'
+import LandingPage from './component/LandingPage'
 import SignInPage from './component/SignInPage'
 import Profile from './component/profile'
 import Settings from './component/settings'
+import HomePage from './component/HomePage'
 
 
 const App = () => {
@@ -12,12 +13,12 @@ const App = () => {
   <Router>   
     <Routes>
       {/* Route for your QuizPage */}
-      <Route path="/quiz" element={<QuizPage/>} />
+     <Route path="/quiz/:subject" element={<QuizPage />} />
 
       {/* Route for your LandingPage */}
-      <Route path="/Landingpage" element={<Landingpage />} />
+      <Route path="/HomePage" element={<HomePage />} />
 
-      <Route path="/" element={<Landingpage />} />
+      <Route path="/" element={<LandingPage />} />
 
       <Route path="/signin" element={<SignInPage />}/>
 

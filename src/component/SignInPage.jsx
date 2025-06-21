@@ -23,7 +23,7 @@ const SignInPage = () => {
       } else {
         await signInWithEmailAndPassword(auth, email, password);
       }
-      navigate("/");
+      navigate("/HomePage");
     } catch (err) {
       console.error("Auth Error:", err);
       setError(err.message || "Something went wrong.");
@@ -83,7 +83,7 @@ const SignInPage = () => {
           </button>
           <br></br>
           <button
-            onClick={() => navigate(-1)} // takes you back to previous page
+            onClick={() => navigate("/")} // takes you back to previous page
             className="mt-4 text-sm text-gray-400 hover:text-white transition duration-150"
           >
             ← Back

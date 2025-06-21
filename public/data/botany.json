@@ -1,0 +1,282 @@
+[
+  {
+    "id": "61",
+    "question": "Which pigment is primary light-absorbing for photosynthesis?",
+    "options": [
+      "Chlorophyll a",
+      "Chlorophyll b",
+      "Carotene",
+      "Xanthophyll"
+    ],
+    "answerIndex": 0,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Primary reaction-center pigment."
+  },
+  {
+    "id": "62",
+    "question": "Which structure transports water in plants?",
+    "options": [
+      "Phloem",
+      "Xylem",
+      "Cambium",
+      "Epermis"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Xylem conducts water upwards."
+  },
+  {
+    "id": "63",
+    "question": "In which plant does double fertilization occur?",
+    "options": [
+      "Gymnosperms",
+      "Angiosperms",
+      "Pterophytes",
+      "Bryophytes"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Angiosperms undergo double fertilization."
+  },
+  {
+    "id": "64",
+    "question": "What’s the tissue for growth at root tips?",
+    "options": [
+      "Meristem",
+      "Parenchyma",
+      "Collenchyma",
+      "Epermis"
+    ],
+    "answerIndex": 0,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Apical meristem causes growth."
+  },
+  {
+    "id": "65",
+    "question": "Which gas is absorbed by stomata?",
+    "options": [
+      "O₂",
+      "N₂",
+      "CO₂",
+      "H₂"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Stomata uptake carbon dioxe."
+  },
+  {
+    "id": "66",
+    "question": "Which is not a seedless vascular plant?",
+    "options": [
+      "Ferns",
+      "Lycopods",
+      "Gymnosperms",
+      "Horsetails"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Gymnosperms produce seeds."
+  },
+  {
+    "id": "67",
+    "question": "Which phenomenon: plant growth toward light?",
+    "options": [
+      "Geotropism",
+      "Hydrotropism",
+      "Phototropism",
+      "Thigmotropism"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Growth in response to light."
+  },
+  {
+    "id": "68",
+    "question": "Which nitrogen-fixing bacteria are in root nodules?",
+    "options": [
+      "Rhizobium",
+      "Lactobacillus",
+      "Clostrium",
+      "Streptococcus"
+    ],
+    "answerIndex": 0,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Rhizobium forms symbiotic nodules."
+  },
+  {
+    "id": "69",
+    "question": "Which part encloses ovule in flower?",
+    "options": [
+      "Calyx",
+      "Corolla",
+      "Ovary",
+      "Stamen"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Ovule is inse the ovary."
+  },
+  {
+    "id": "70",
+    "question": "Which tissue stores food in plants?",
+    "options": [
+      "Collenchyma",
+      "Parenchyma",
+      "Sclerenchyma",
+      "Epermis"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Parenchyma stores starch/oils."
+  },
+  {
+    "id": "71",
+    "question": "Flower with both stamens and carpels?",
+    "options": [
+      "Imperfect",
+      "Perfect",
+      "Monoecious",
+      "Dioecious"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Perfect flower has both reproductive parts."
+  },
+  {
+    "id": "72",
+    "question": "Which plant hormone promotes fruit ripening?",
+    "options": [
+      "Auxin",
+      "Gibberellin",
+      "Ethylene",
+      "Cytokinin"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Ethylene gas triggers ripening."
+  },
+  {
+    "id": "73",
+    "question": "What’s the plasma membrane in plant cells?",
+    "options": [
+      "Cellulose layer",
+      "Phospholip bilayer",
+      "Lignin",
+      "Cutin"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Standard cell membrane structure."
+  },
+  {
+    "id": "74",
+    "question": "Which enzyme in photosynthesis splits water?",
+    "options": [
+      "Rubisco",
+      "ATP synthase",
+      "Photosystem II",
+      "Photosystem I"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "PSII oxizes water releasing O₂."
+  },
+  {
+    "id": "75",
+    "question": "Leaves have stomata primarily on which se?",
+    "options": [
+      "Upper",
+      "Lower",
+      "Both",
+      "Mrib"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Lower epermis has more stomata."
+  },
+  {
+    "id": "76",
+    "question": "Which tissue gives mechanical support?",
+    "options": [
+      "Sclerenchyma",
+      "Parenchyma",
+      "Collenchyma",
+      "Meristem"
+    ],
+    "answerIndex": 0,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Sclerenchyma cells are thick‑walled."
+  },
+  {
+    "id": "77",
+    "question": "Which is a C₄ plant?",
+    "options": [
+      "Rice",
+      "Wheat",
+      "Maize",
+      "Barley"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Maize uses C₄ photosynthetic pathway."
+  },
+  {
+    "id": "78",
+    "question": "What carries pollen in flowering plants?",
+    "options": [
+      "Stigma",
+      "Anther",
+      "Style",
+      "Ovary"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Anther produces pollen grains."
+  },
+  {
+    "id": "79",
+    "question": "Which plant part is triplo in an angiosperm?",
+    "options": [
+      "Embryo",
+      "Endosperm",
+      "Zygote",
+      "Seed coat"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Endosperm is 3n from double fertilization."
+  },
+  {
+    "id": "80",
+    "question": "Mendel’s law of segregation applies to which generation?",
+    "options": [
+      "F1",
+      "F2",
+      "P",
+      "F3"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Segregation observed in F2 generation."
+  }
+]

@@ -1,0 +1,1108 @@
+[
+  {
+    "id": "81",
+    "question": "Which blood cell type transports oxygen?",
+    "options": [
+      "Neutrophils",
+      "Erythrocytes",
+      "Lymphocytes",
+      "Platelets"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "They contain hemoglobin to carry O₂."
+  },
+  {
+    "id": "82",
+    "question": "What’s the structural protein in hair, nails?",
+    "options": [
+      "Myosin",
+      "Keratin",
+      "Collagen",
+      "Elastin"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Keratin forms hair, nails, epermis."
+  },
+  {
+    "id": "83",
+    "question": "Which type of neuron transmits impulses to the CNS?",
+    "options": [
+      "Efferent",
+      "Afferent",
+      "Motor",
+      "Association"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Afferent (sensory) neurons go toward CNS."
+  },
+  {
+    "id": "84",
+    "question": "What’s the functional unit of the kney?",
+    "options": [
+      "Neuron",
+      "Nephron",
+      "Lobe",
+      "Glomerulus"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Nephron filters and forms urine."
+  },
+  {
+    "id": "85",
+    "question": "Which vitamin is made in skin on sun exposure?",
+    "options": [
+      "Vitamin A",
+      "Vitamin C",
+      "Vitamin D",
+      "Vitamin E"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "UV light converts 7‑dehydrocholesterol to Vitamin D₃."
+  },
+  {
+    "id": "86",
+    "question": "Which chamber pumps oxygenated blood to body?",
+    "options": [
+      "Right atrium",
+      "Right ventricle",
+      "Left ventricle",
+      "Left atrium"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Left ventricle pumps into systemic circulation."
+  },
+  {
+    "id": "87",
+    "question": "What prevents backflow into atria?",
+    "options": [
+      "Semilunar valves",
+      "Atrioventricular valves",
+      "Papillary muscles",
+      "Chordae tendineae"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "AV valves (mitral/tricusp) stop backflow."
+  },
+  {
+    "id": "88",
+    "question": "What’s the basic unit of life?",
+    "options": [
+      "Organ",
+      "Cell",
+      "Tissue",
+      "Organ System"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Cell is fundamental unit of all living things."
+  },
+  {
+    "id": "89",
+    "question": "Which phylum has jointed appendages?",
+    "options": [
+      "Annela",
+      "Arthropoda",
+      "Mollusca",
+      "Chordata"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Arthropods include insects, crustaceans, etc."
+  },
+  {
+    "id": "90",
+    "question": "Which animal regenerates lost limbs?",
+    "options": [
+      "Eagle",
+      "Lizard",
+      "Dog",
+      "Pig"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Some lizards can regrow their tails."
+  },
+  {
+    "id": "91",
+    "question": "What’s the genetic material in most viruses?",
+    "options": [
+      "DNA only",
+      "RNA only",
+      "Either DNA or RNA",
+      "Protein"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Viruses carry either DNA or RNA."
+  },
+  {
+    "id": "92",
+    "question": "Which blood vessel carries blood away from heart?",
+    "options": [
+      "Vein",
+      "Artery",
+      "Capillary",
+      "Venule"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Arteries carry oxygenated blood away from heart."
+  },
+  {
+    "id": "93",
+    "question": "Which part of brain controls balance?",
+    "options": [
+      "Cerebrum",
+      "Medulla",
+      "Cerebellum",
+      "Thalamus"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Cerebellum coordinates movement and balance."
+  },
+  {
+    "id": "94",
+    "question": "Which is warm-blooded animal?",
+    "options": [
+      "Snake",
+      "Frog",
+      "Whale",
+      "Fish"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Mammals maintain internal body temperature."
+  },
+  {
+    "id": "95",
+    "question": "Amphibians breathe using?",
+    "options": [
+      "Gills only",
+      "Lungs only",
+      "Skin and lungs",
+      "Air sacs"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Many amphibians respire via skin and lungs."
+  },
+  {
+    "id": "96",
+    "question": "Which organ stores bile?",
+    "options": [
+      "Liver",
+      "Pancreas",
+      "Gallbladder",
+      "Stomach"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Bile produced in liver, stored in gallbladder."
+  },
+  {
+    "id": "97",
+    "question": "Which cell organelle makes ATP?",
+    "options": [
+      "Nucleus",
+      "Chloroplast",
+      "Mitochondrion",
+      "Ribosome"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Mitochondria are the cell's powerhouse."
+  },
+  {
+    "id": "98",
+    "question": "What are the blood cells that fight infection?",
+    "options": [
+      "Erythrocytes",
+      "Neutrophils",
+      "Platelets",
+      "Osteocytes"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Neutrophils are key white blood cells in immunity."
+  },
+  {
+    "id": "99",
+    "question": "Which organ system removes waste?",
+    "options": [
+      "Digestive",
+      "Circulatory",
+      "Excretory",
+      "Respiratory"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Excretory system removes metabolic wastes."
+  },
+  {
+    "id": "100",
+    "question": "Which part of neuron receives signals?",
+    "options": [
+      "Axon",
+      "Dendrite",
+      "Myelin sheath",
+      "Nucleus"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-zoology",
+    "topic": "conceptual",
+    "solution": "Dendrites receive nerve impulses."
+  },
+    {
+    "id": "61",
+    "question": "Which pigment is primary light-absorbing for photosynthesis?",
+    "options": [
+      "Chlorophyll a",
+      "Chlorophyll b",
+      "Carotene",
+      "Xanthophyll"
+    ],
+    "answerIndex": 0,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Primary reaction-center pigment."
+  },
+  {
+    "id": "62",
+    "question": "Which structure transports water in plants?",
+    "options": [
+      "Phloem",
+      "Xylem",
+      "Cambium",
+      "Epermis"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Xylem conducts water upwards."
+  },
+  {
+    "id": "63",
+    "question": "In which plant does double fertilization occur?",
+    "options": [
+      "Gymnosperms",
+      "Angiosperms",
+      "Pterophytes",
+      "Bryophytes"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Angiosperms undergo double fertilization."
+  },
+  {
+    "id": "64",
+    "question": "What’s the tissue for growth at root tips?",
+    "options": [
+      "Meristem",
+      "Parenchyma",
+      "Collenchyma",
+      "Epermis"
+    ],
+    "answerIndex": 0,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Apical meristem causes growth."
+  },
+  {
+    "id": "65",
+    "question": "Which gas is absorbed by stomata?",
+    "options": [
+      "O₂",
+      "N₂",
+      "CO₂",
+      "H₂"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Stomata uptake carbon dioxe."
+  },
+  {
+    "id": "66",
+    "question": "Which is not a seedless vascular plant?",
+    "options": [
+      "Ferns",
+      "Lycopods",
+      "Gymnosperms",
+      "Horsetails"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Gymnosperms produce seeds."
+  },
+  {
+    "id": "67",
+    "question": "Which phenomenon: plant growth toward light?",
+    "options": [
+      "Geotropism",
+      "Hydrotropism",
+      "Phototropism",
+      "Thigmotropism"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Growth in response to light."
+  },
+  {
+    "id": "68",
+    "question": "Which nitrogen-fixing bacteria are in root nodules?",
+    "options": [
+      "Rhizobium",
+      "Lactobacillus",
+      "Clostrium",
+      "Streptococcus"
+    ],
+    "answerIndex": 0,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Rhizobium forms symbiotic nodules."
+  },
+  {
+    "id": "69",
+    "question": "Which part encloses ovule in flower?",
+    "options": [
+      "Calyx",
+      "Corolla",
+      "Ovary",
+      "Stamen"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Ovule is inse the ovary."
+  },
+  {
+    "id": "70",
+    "question": "Which tissue stores food in plants?",
+    "options": [
+      "Collenchyma",
+      "Parenchyma",
+      "Sclerenchyma",
+      "Epermis"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Parenchyma stores starch/oils."
+  },
+  {
+    "id": "71",
+    "question": "Flower with both stamens and carpels?",
+    "options": [
+      "Imperfect",
+      "Perfect",
+      "Monoecious",
+      "Dioecious"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Perfect flower has both reproductive parts."
+  },
+  {
+    "id": "72",
+    "question": "Which plant hormone promotes fruit ripening?",
+    "options": [
+      "Auxin",
+      "Gibberellin",
+      "Ethylene",
+      "Cytokinin"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Ethylene gas triggers ripening."
+  },
+  {
+    "id": "73",
+    "question": "What’s the plasma membrane in plant cells?",
+    "options": [
+      "Cellulose layer",
+      "Phospholip bilayer",
+      "Lignin",
+      "Cutin"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Standard cell membrane structure."
+  },
+  {
+    "id": "74",
+    "question": "Which enzyme in photosynthesis splits water?",
+    "options": [
+      "Rubisco",
+      "ATP synthase",
+      "Photosystem II",
+      "Photosystem I"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "PSII oxizes water releasing O₂."
+  },
+  {
+    "id": "75",
+    "question": "Leaves have stomata primarily on which se?",
+    "options": [
+      "Upper",
+      "Lower",
+      "Both",
+      "Mrib"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Lower epermis has more stomata."
+  },
+  {
+    "id": "76",
+    "question": "Which tissue gives mechanical support?",
+    "options": [
+      "Sclerenchyma",
+      "Parenchyma",
+      "Collenchyma",
+      "Meristem"
+    ],
+    "answerIndex": 0,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Sclerenchyma cells are thick‑walled."
+  },
+  {
+    "id": "77",
+    "question": "Which is a C₄ plant?",
+    "options": [
+      "Rice",
+      "Wheat",
+      "Maize",
+      "Barley"
+    ],
+    "answerIndex": 2,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Maize uses C₄ photosynthetic pathway."
+  },
+  {
+    "id": "78",
+    "question": "What carries pollen in flowering plants?",
+    "options": [
+      "Stigma",
+      "Anther",
+      "Style",
+      "Ovary"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Anther produces pollen grains."
+  },
+  {
+    "id": "79",
+    "question": "Which plant part is triplo in an angiosperm?",
+    "options": [
+      "Embryo",
+      "Endosperm",
+      "Zygote",
+      "Seed coat"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Endosperm is 3n from double fertilization."
+  },
+  {
+    "id": "80",
+    "question": "Mendel’s law of segregation applies to which generation?",
+    "options": [
+      "F1",
+      "F2",
+      "P",
+      "F3"
+    ],
+    "answerIndex": 1,
+    "chapter": "general-botany",
+    "topic": "conceptual",
+    "solution": "Segregation observed in F2 generation."
+  },
+   {
+    "id": "nPwDAPpBUUrYKsRB",
+    "question": "The power factor of $$AC$$ circuit having resistance $$(R)$$ and inductance $$(L)$$ connected in series and an angular velocity $$\\omega $$ is ",
+    "options": [
+      "$$R/\\omega L$$ ",
+      "$$R/{\\left( {{R^2} + {\\omega ^2}{L^2}} \\right)^{1/2}}$$ ",
+      "$$\\omega L/R$$ ",
+      "$$R/{\\left( {{R^2} - {\\omega ^2}{L^2}} \\right)^{1/2}}$$ "
+    ],
+    "answerIndex": 1,
+    "chapter": "alternating-current",
+    "topic": "ac-circuits-and-power-in-ac-circuits",
+    "solution": "$$R/{\\left( {{R^2} + {\\omega ^2}{L^2}} \\right)^{1/2}}$$ "
+  },
+  {
+    "id": "lydY8ehUtKC26aZ0",
+    "question": "In an $$LCR$$ series $$a.c.$$ circuit, the voltage across each of the components, $$L,C$$ and $$R$$ is $$50V$$. The voltage across the $$L.C$$ combination will be :",
+    "options": [
+      "$$100V$$ ",
+      "$$50\\sqrt 2 $$ ",
+      "$$50$$ $$V$$ ",
+      "$$0$$ $$V$$ (zero) "
+    ],
+    "answerIndex": 3,
+    "chapter": "alternating-current",
+    "topic": "ac-circuits-and-power-in-ac-circuits",
+    "solution": "$$0$$ $$V$$ (zero) "
+  },
+  {
+    "id": "SmqZd8MnGBgCzzBp",
+    "question": "In a $$LCR$$ circuit capacitance is changed from $$C$$ to $$2$$ $$C$$. For the resonant frequency to remain unchaged, the inductance should be changed from $$L$$ to ",
+    "options": [
+      "$$L/2$$ ",
+      "$$2L$$ ",
+      "$$4L$$ ",
+      "$$L/4$$"
+    ],
+    "answerIndex": 0,
+    "chapter": "alternating-current",
+    "topic": "ac-circuits-and-power-in-ac-circuits",
+    "solution": "$$L/2$$ "
+  },
+  {
+    "id": "oi26w9o1iXOCTXgv",
+    "question": "Alternating current can not be measured by $$D.C.$$ ammeter because ",
+    "options": [
+      "Average value of current for complete cycle is zero ",
+      "$$A.C.$$ Changes direction ",
+      "$$A.C.$$  can not pass through $$D.C.$$ Ammeter ",
+      "$$D.C.$$ Ammeter will get damaged. "
+    ],
+    "answerIndex": 0,
+    "chapter": "alternating-current",
+    "topic": "ac-circuits-and-power-in-ac-circuits",
+    "solution": "Average value of current for complete cycle is zero "
+  },
+  {
+    "id": "YEww4HpdQL4O8otA",
+    "question": "The self inductance of the motor of an electric fan is $$10$$ $$H$$. In order to impart maximum power at $$50$$ $$Hz$$, it should be connected to a capacitance of ",
+    "options": [
+      "$$8\\mu F$$ ",
+      "$$4\\mu F$$",
+      "$$2\\mu F$$",
+      "$$1\\mu F$$"
+    ],
+    "answerIndex": 3,
+    "chapter": "alternating-current",
+    "topic": "ac-circuits-and-power-in-ac-circuits",
+    "solution": "$$1\\mu F$$"
+  },
+  {
+    "id": "iLTAg7jdqZg8KmtF",
+    "question": "A circuit has a resistance of $$12$$ $$ohm$$ and an impedance of $$15$$ $$ohm$$. The power factor of the circuit will be ",
+    "options": [
+      "$$0.4$$ ",
+      "$$0.8$$ ",
+      "$$0.125$$ ",
+      "$$1.25$$ "
+    ],
+    "answerIndex": 1,
+    "chapter": "alternating-current",
+    "topic": "ac-circuits-and-power-in-ac-circuits",
+    "solution": "$$0.8$$ "
+  },
+  {
+    "id": "uRbFUgJGpog2DiZu",
+    "question": "The phase difference between the alternating current and $$emf$$ is $${\\pi  \\over 2}.$$ Which of the following cannot be the constituent of the circuit? ",
+    "options": [
+      "$$R,L$$ ",
+      "$$C$$ alone ",
+      "$$L$$ alone ",
+      "$$L, C$$ "
+    ],
+    "answerIndex": 0,
+    "chapter": "alternating-current",
+    "topic": "ac-circuits-and-power-in-ac-circuits",
+    "solution": "$$R,L$$ "
+  },
+  {
+    "id": "ASzIjiBCgAA6c2TN",
+    "question": "In a series resonant $$LCR$$ circuit, the voltage across $$R$$ is $$100$$ volts and $$R = 1\\,k\\Omega $$ with $$C = 2\\mu F.$$ The resonant frequency $$\\omega $$ is $$200$$ $$rad/s$$. At resonance the voltage across $$L$$ is ",
+    "options": [
+      "$$2.5 \\times {10^{ - 2}}V$$ ",
+      "$$40$$ $$V$$ ",
+      "$$250$$ $$V$$ ",
+      "$$4 \\times {10^{ - 3}}V$$ "
+    ],
+    "answerIndex": 2,
+    "chapter": "alternating-current",
+    "topic": "ac-circuits-and-power-in-ac-circuits",
+    "solution": "$$250$$ $$V$$ "
+  },
+   {
+    "id": "4sIot5QGUtwc9g6c",
+    "question": "During dehydration of alcohols to alkenes by heating with conc. H<sub>2</sub>SO<sub>4</sub> the initiation step is",
+    "options": [
+      "formation of carbocation",
+      "elimination of water",
+      "formation of an ester",
+      "protonation of alcohol molecule"
+    ],
+    "answerIndex": 3,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "protonation of alcohol molecule"
+  },
+  {
+    "id": "wD7xPfbcf8ctAFRK",
+    "question": "Acetyl bromide reacts with excess of CH<sub>3</sub>MgI followed by treatment with a saturated solution\nof NH<sub>4</sub>Cl given ",
+    "options": [
+      "acetone",
+      "acetyl iodide ",
+      "2- methyl -2- propanol ",
+      "acetamide "
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "2- methyl -2- propanol "
+  },
+  {
+    "id": "2nHqBAvmBhJ6Guml",
+    "question": "Acid catalyzed hydration of alkenes except ethene leads to the formation of ",
+    "options": [
+      "primary alcohol ",
+      "secondary or tertiary alcohol ",
+      "mixture of primary and secondary alcohols ",
+      "mixture of secondary and tertiary alcohols "
+    ],
+    "answerIndex": 3,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "mixture of secondary and tertiary alcohols "
+  },
+  {
+    "id": "M7I9T2V8qoOi1qGw",
+    "question": "The best reagent to convert pent -3- en-2-ol into pent -3-en-2-one is",
+    "options": [
+      "Acidic permanganate",
+      "Acidic dichromate",
+      "Chromic anhydride in glacial acetic acid ",
+      "Pyridinium chloro – chromate"
+    ],
+    "answerIndex": 3,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "Pyridinium chloro – chromate"
+  },
+  {
+    "id": "TI4fYt2BBabwcPlc",
+    "question": "In the following sequence of reactions, <br/>\nCH<sub>3</sub>CH<sub>2</sub>OH $$\\buildrel {P + {I_2}} \\over\n \\longrightarrow $$ A $$\\mathrel{\\mathop{\\kern0pt\\longrightarrow}\n\\limits_{ether}^{Mg}} $$ B $$\\buildrel {HCHO} \\over\n \\longrightarrow $$ C $$\\buildrel {{H_2}O} \\over\n \\longrightarrow $$ D<br/>\nthe compound ‘D’ is ",
+    "options": [
+      "butanal",
+      "n-butyl alcohol ",
+      "n-propyl alcohol ",
+      "propanal "
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "n-propyl alcohol "
+  },
+  {
+    "id": "F20jceMYLocIsmNj",
+    "question": "From amongst the following alcohols the one that would react fastest with conc. HCl and anhydrous\nZnCl<sub>2</sub>, is",
+    "options": [
+      "2–Butanol",
+      "2–Methylpropan–2–ol",
+      "2–Methylpropanol",
+      "1–Butanol"
+    ],
+    "answerIndex": 1,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "2–Methylpropan–2–ol"
+  },
+  {
+    "id": "OF4fQ69S9QNL7Qbo",
+    "question": "An unknown alcohol is treated with the “Lucas reagent” to determine whether the alcohol is primary,\nsecondary or tertiary. Which alcohol reacts fastest and by what mechanism: ",
+    "options": [
+      "tertiary alcohol by S<sub>N</sub>1",
+      "secondary alcohol by S<sub>N</sub>2",
+      "tertiary alcohol by S<sub>N</sub>2",
+      "secondary alcohol by S<sub>N</sub>1 "
+    ],
+    "answerIndex": 0,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "tertiary alcohol by S<sub>N</sub>1"
+  },
+  {
+    "id": "jIFtaNeZrGrvSnIr",
+    "question": "The most suitable reagent for the conversion of R - CH<sub>2</sub> - OH $$\\to$$ R - CHO is:",
+    "options": [
+      "CrO<sub>3</sub>",
+      "PCC (Pyridinium Chlorochromate)",
+      "KMnO<sub>4</sub>",
+      "K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub>"
+    ],
+    "answerIndex": 1,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "PCC (Pyridinium Chlorochromate)"
+  },
+  {
+    "id": "tdjhEQYgwwe1qxvNtV9Ih",
+    "question": "The gas evolved on heating CH<sub>3</sub>MgBr in methanol is :",
+    "options": [
+      "HBr",
+      "Methane",
+      "Ethane",
+      "Propane"
+    ],
+    "answerIndex": 1,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "Methane"
+  },
+  {
+    "id": "0xVdcFmwK7EJXT4nkWYJI",
+    "question": "Bouveault-Blanc reduction reaction involves :",
+    "options": [
+      "Reduction of an acyl halide with  H<sub>2</sub>/Pd.",
+      "Reduction of an ester with Na/C<sub>2</sub>H<sub>5</sub>OH.",
+      "Reduction of a carbonyl compound with Na/Hg and HCl.",
+      "Reduction of an anhydride with LiAlH<sub>4</sub>."
+    ],
+    "answerIndex": 1,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "Reduction of an ester with Na/C<sub>2</sub>H<sub>5</sub>OH."
+  },
+  {
+    "id": "0T30OIGXiLWPby3zBj4re",
+    "question": "The major product of the following reaction is :<br/>\n$${\\rm{C}}{{\\rm{H}}_3}{\\rm{CH =  CHC}}{{\\rm{O}}_2}{\\rm{CH_3 }}\\buildrel {LiAl{H_4}} \\over\n \\longrightarrow $$",
+    "options": [
+      "CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CHO",
+      "CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CO<sub>2</sub>CH<sub>3</sub>",
+      "CH<sub>3</sub>CH = CHCH<sub>2</sub>OH",
+      "CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>OH"
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "CH<sub>3</sub>CH = CHCH<sub>2</sub>OH"
+  },
+  {
+    "id": "3S1G0WJPmCpX2z10Ng1klurc923",
+    "question": "Ceric ammonium nitrate and CHCl<sub>3</sub>/alc. KOH are used for the identification of functional groups present in __________ and _______ respectively.",
+    "options": [
+      "amine, alcohol",
+      "alcohol, phenol",
+      "alcohol, amine",
+      "amine, phenol"
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "alcohol, amine"
+  },
+  {
+    "id": "1krq60bl7",
+    "question": "In the given reaction \n<br/><br/>3-Bromo-2, 2-dimethyl butane $$\\buildrel {{C_2}{H_5}OH} \\over\n \\longrightarrow \\mathop {'A'}\\limits_{(Major\\,\\Pr oduct)} $$ <br/><br/>Product A is :",
+    "options": [
+      "2-Ethoxy-3, 3-dimethyl butane",
+      "1-Ethoxy-3, 3-dimethyl butane",
+      "2-Ethoxy-2, 3-dimethyl butane",
+      "2-Hydroxy-3, 3-dimethyl butane"
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "2-Ethoxy-2, 3-dimethyl butane"
+  },
+  {
+    "id": "1ktiauoy6",
+    "question": "Given below are two statements : one is labelled as Assertion (A) and the other is labelled as Reason (R). <br/><br/>Assertion (A) : Treatment of bromine water with propene yields 1-bromopropan-2-ol.<br/><br/>Reason (R) : Attack of water on bromonium ion follows Markovnikov rule and results in 1-bromopropan-2-ol.<br/><br/>In the light of the above statements, choose the most appropriate answer from the options given below :",
+    "options": [
+      "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+      "(A) is false but (R) is true",
+      "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "(A) is true but (R) is false"
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "Both (A) and (R) are true and (R) is the correct explanation of (A)"
+  },
+  {
+    "id": "1l5bdivfj",
+    "question": "<p>Hex-4-ene-2-ol on treatment with PCC gives 'A'. 'A' on reaction with sodium hypoiodite gives 'B', which on further heating with soda lime gives 'C'. The compound 'C' is :</p>",
+    "options": [
+      "2-pentene",
+      "proponaldehyde",
+      "2-butene",
+      "4-methylpent-2-ene"
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "2-butene"
+  },
+  {
+    "id": "1l6e1u9l1",
+    "question": "<p>Given below are two statements :</p>\n<p>Statement I : On heating with $$\\mathrm{KHSO}_{4}$$, glycerol is dehydrated and acrolein is formed.</p>\n<p>Statement II : Acrolein has fruity odour and can be used to test glycerol's presence.</p>\n<p>Choose the correct option.</p>",
+    "options": [
+      "Both Statement I and Statement II are correct.",
+      "Both Statement I and Statement II are incorrect.",
+      "Statement I is correct but Statement II is incorrect.",
+      "Statement I is incorrect but Statement II is correct."
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "Statement I is correct but Statement II is incorrect."
+  },
+  {
+    "id": "1l6rkwll0",
+    "question": "<p>When ethanol is heated with conc. $$\\mathrm{H}_{2} \\mathrm{SO}_{4}$$, a gas is produced. The compound formed, when this gas is treated with cold dilute aqueous solution of Baeyer's reagent, is</p>",
+    "options": [
+      "formaldehyde",
+      "formic acid",
+      "glycol",
+      "ethanoic acid"
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "glycol"
+  },
+  {
+    "id": "1ldsc9ica",
+    "question": "<p>A solution of $$\\mathrm{Cr O_5}$$ in amyl alcohol has a __________ colour.</p>",
+    "options": [
+      "Yellow",
+      "Orange-Red",
+      "Green",
+      "Blue"
+    ],
+    "answerIndex": 3,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "Blue"
+  },
+  {
+    "id": "1lgvurueq",
+    "question": "<p>Incorrect method of preparation for alcohols from the following is:</p>",
+    "options": [
+      "Hydroboration-oxidation of alkene.",
+      "Reaction of Ketone with $$\\mathrm{RMgBr}$$ followed by hydrolysis.",
+      "Ozonolysis of alkene.",
+      "Reaction of alkyl halide with aqueous $$\\mathrm{NaOH}$$."
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "Ozonolysis of alkene."
+  },
+  {
+    "id": "1lh02rkk8",
+    "question": "<p>Given below are two statements: One is labelled as Assertion A and the other is labelled as Reason R.</p>\n<p>Assertion A: Butan -1- ol has higher boiling point than ethoxyethane.</p>\n<p>Reason R: Extensive hydrogen bonding leads to stronger association of molecules.</p>\n<p>In the light of the above statements, choose the correct answer from the options given below:</p>",
+    "options": [
+      "A is false but R is true",
+      "Both A and R are true but R is not the correct explanation of A",
+      "Both A and R are true and R is the correct explanation of A",
+      "A is true but R is false"
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "Both A and R are true and R is the correct explanation of A"
+  },
+  {
+    "id": "1lh03g9az",
+    "question": "<p>The water gas on reacting with cobalt as a catalyst forms</p>",
+    "options": [
+      "Methanoic acid",
+      "Methanol",
+      "Methanal",
+      "Ethanol"
+    ],
+    "answerIndex": 1,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "Methanol"
+  },
+  {
+    "id": "jaoe38c1lse7anlk",
+    "question": "<p>Given below are two statements: One is labelled as Assertion A and the other is labelled as Reason R:</p>\n<p>Assertion A: Alcohols react both as nucleophiles and electrophiles.</p>\n<p>Reason R: Alcohols react with active metals such as sodium, potassium and aluminum to yield corresponding alkoxides and liberate hydrogen.</p>\n<p>In the light of the above statements, choose the correct answer from the options given below:</p>",
+    "options": [
+      "$$A$$ is false but $$R$$ is true.\n",
+      "Both $$A$$ and $$R$$ are true but $$R$$ is NOT the correct explanation of $$A$$.\n",
+      "Both $$A$$ and $$R$$ are true and $$R$$ is the correct explanation of $$A$$.\n",
+      "$$A$$ is true but $$R$$ is false."
+    ],
+    "answerIndex": 1,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-alcohols",
+    "solution": "Both $$A$$ and $$R$$ are true but $$R$$ is NOT the correct explanation of $$A$$.\n"
+  },
+  {
+    "id": "rKpvjN3h9RhkMatE",
+    "question": "An ethar is more volatile than an alcohol having the same molecular formula. This is due to",
+    "options": [
+      "alcohols having resonance structures",
+      "inter-molecular hydrogen bonding in ethers",
+      "inter-molecular hydrogen bonding in alcohols",
+      "dipole characters of ethers"
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-ethers",
+    "solution": "inter-molecular hydrogen bonding in alcohols"
+  },
+  {
+    "id": "plPnh9m4gar6Qxf5",
+    "question": "HBr reacts with CH<sub>2</sub> = CH – OCH<sub>3</sub> under anhydrous conditions at room temperature to give ",
+    "options": [
+      "CH<sub>3</sub>CHO and CH<sub>3</sub>Br ",
+      "BrCH<sub>2</sub>CHO and CH<sub>3</sub>OH",
+      "BrCH<sub>2</sub> – CH<sub>2</sub> – OCH<sub>3</sub> ",
+      "H<sub>3</sub>C – CHBr – OCH<sub>3</sub>"
+    ],
+    "answerIndex": 3,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-ethers",
+    "solution": "H<sub>3</sub>C – CHBr – OCH<sub>3</sub>"
+  },
+  {
+    "id": "1kteci83s",
+    "question": "Given below are two statements : one is labelled as Assertion (A) and the other is labelled as Reason (R). <br/><br/>Assertion (A) : Synthesis of ethyl phenyl ether may be achieved by Williamson synthesis.<br/><br/>Reason (R) : Reaction of bromobenzene with sodium ethoxide yields ethyl phenyl ether.<br/><br/>In the light of the above statements, choose the most appropriate answer from the options given below :",
+    "options": [
+      "Both (A) and (R) are correct and (R) is the correct explanation of (A)",
+      "(A) is correct but (R) is not correct",
+      "(A) is not correct but (R) is correct",
+      "Both (A) and (R) are correct but (R) is not the correct explanation of (A)."
+    ],
+    "answerIndex": 1,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-ethers",
+    "solution": "(A) is correct but (R) is not correct"
+  },
+  {
+    "id": "1lgq4gt4t",
+    "question": "<p>2-Methyl propyl bromide reacts with $$\\mathrm{C}_{2} \\mathrm{H}_{5} \\mathrm{O}^{-}$$ and gives 'A' whereas on reaction with $$\\mathrm{C}_{2} \\mathrm{H}_{5} \\mathrm{OH}$$ it gives 'B'. The mechanism followed in these reactions and the products 'A' and 'B' respectively are :</p>",
+    "options": [
+      "$$\\mathrm{S}_{N} 1, A=$$ tert-butyl ethyl ether; $$\\mathrm{S}_{N} 2, B=$$ iso-butyl ethyl ether",
+      "$$\\mathrm{S}_{\\mathrm{N}} 1, \\mathrm{~A}=$$ tert-butyl ethyl ether; $$\\mathrm{S}_{\\mathrm{N}} 1, \\mathrm{~B}=$$ 2-butyl ethyl ether",
+      "$$\\mathrm{S}_{\\mathrm{N}} 2, \\mathrm{~A}=$$ iso-butyl ethyl ether; $$\\mathrm{S}_{\\mathrm{N}} 1, \\mathrm{~B}=$$ tert-butyl ethyl ether",
+      "$$\\mathrm{S}_{\\mathrm{N}} 2, \\mathrm{~A}=$$ 2-butyl ethyl ether; $$\\mathrm{S}_{\\mathrm{N}} 2, \\mathrm{~B}=$$ iso-butyl ethyl ether"
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-ethers",
+    "solution": "$$\\mathrm{S}_{\\mathrm{N}} 2, \\mathrm{~A}=$$ iso-butyl ethyl ether; $$\\mathrm{S}_{\\mathrm{N}} 1, \\mathrm{~B}=$$ tert-butyl ethyl ether"
+  },
+  {
+    "id": "1lgyh8qi0",
+    "question": "<p>Suitable reaction condition for preparation of Methyl phenyl ether is</p>",
+    "options": [
+      "Benzene, MeBr",
+      "$$\\mathrm{Ph{O^\\Theta }N{a^ \\oplus }}$$, MeBr",
+      "Ph - Br, $$\\mathrm{Me{O^\\Theta }N{a^ \\oplus }}$$",
+      "$$\\mathrm{Ph{O^\\Theta }N{a^ \\oplus }}$$, MeOH"
+    ],
+    "answerIndex": 1,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-ethers",
+    "solution": "$$\\mathrm{Ph{O^\\Theta }N{a^ \\oplus }}$$, MeBr"
+  },
+  {
+    "id": "7Mv4P7zHHsSe0WjW",
+    "question": "Phenyl magnesium bromide reacts with methanol to give ",
+    "options": [
+      "a mixture of anisole and Mg(OH)Br",
+      "a mixture of benzene and Mg(OMe)Br ",
+      "a mixture of toluene and Mg(OH)Br",
+      "a mixture of phenol and Mg(Me)Br"
+    ],
+    "answerIndex": 1,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-phenols",
+    "solution": "a mixture of benzene and Mg(OMe)Br "
+  },
+  {
+    "id": "CNnkpxmvwOadc5tt",
+    "question": "Phenol, when it first reacts with concentrated sulphuric acid and then with concentrated nitric acid,\ngives",
+    "options": [
+      "2,4,6-trinitrobenzene",
+      "o-nitrophenol ",
+      "p-nitrophenol ",
+      "nitrobenzene "
+    ],
+    "answerIndex": 1,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-phenols",
+    "solution": "o-nitrophenol "
+  },
+  {
+    "id": "4HLMIyteMTWXUX9g",
+    "question": "The major product obtained on interaction of phenol with sodium hydroxide and carbon dioxide is : ",
+    "options": [
+      "benzoic acid ",
+      "salicylaldehyde ",
+      "salicylic acid",
+      "phthalic acid "
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-phenols",
+    "solution": "salicylic acid"
+  },
+  {
+    "id": "RRpobofkpARvU8XC",
+    "question": "Phenol is heated with a solution of mixture of KBr and KBrO<sub>3</sub>. The major product obtained in the above\nreaction is ",
+    "options": [
+      "3-Bromophenol",
+      "4-Bromophenol",
+      "2, 4, 6- Tribromophenol ",
+      "2-Bromophenol "
+    ],
+    "answerIndex": 2,
+    "chapter": "alcohols-phenols-and-ethers",
+    "topic": "properties,-preparation-and-uses-of-phenols",
+    "solution": "2, 4, 6- Tribromophenol "
+  }
+]

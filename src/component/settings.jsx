@@ -1,26 +1,33 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
+import { db } from "../../firebase/firebase";
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { doc, setDoc, getDoc } from 'firebase/firestore';
 
 const Settings = () => {
-  // State for quiz preferences
+  const navigate = useNavigate();
+  const auth = getAuth();
+  const [user, setUser] = useState(null);
+  const [isLightMode, setIsLightMode] = useState(() => localStorage.getItem("theme") === "light");
+
+  // Quiz preferences
   const [numQuestions, setNumQuestions] = useState(10);
   const [difficulty, setDifficulty] = useState('medium');
-  const [timeLimit, setTimeLimit] = useState('none'); // e.g., 'none', '30s', '60s'
+  const [timeLimit, setTimeLimit] = useState('none');
 
-  // States for user profile settings
+  // User profile
   const [displayName, setDisplayName] = useState('');
-  const [stream, setStream] = useState('none'); // Default to 'none' or a relevant default stream
+  const [stream, setStream] = useState('none');
+  const [message, setMessage] = useState("");
 
-  // Available streams
   const availableStreams = [
     { value: 'none', label: 'Select Stream' },
     { value: 'jee', label: 'JEE' },
     { value: 'neet', label: 'NEET' },
     { value: 'boards', label: 'Boards' },
     { value: 'olympiad', label: 'Olympiad' },
-    // Add more streams as needed
   ];
 
-  // Load saved settings from local storage on component mount
   useEffect(() => {
     const savedNumQuestions = localStorage.getItem('numQuestions');
     const savedDifficulty = localStorage.getItem('difficulty');
@@ -28,76 +35,106 @@ const Settings = () => {
     const savedDisplayName = localStorage.getItem('displayName');
     const savedStream = localStorage.getItem('stream');
 
-    if (savedNumQuestions) {
-      setNumQuestions(parseInt(savedNumQuestions, 10));
-    }
-    if (savedDifficulty) {
-      setDifficulty(savedDifficulty);
-    }
-    if (savedTimeLimit) {
-      setTimeLimit(savedTimeLimit);
-    }
-    if (savedDisplayName) {
-      setDisplayName(savedDisplayName);
-    }
-    if (savedStream) {
-      setStream(savedStream);
-    }
+    if (savedNumQuestions) setNumQuestions(parseInt(savedNumQuestions, 10));
+    if (savedDifficulty) setDifficulty(savedDifficulty);
+    if (savedTimeLimit) setTimeLimit(savedTimeLimit);
+    if (savedDisplayName) setDisplayName(savedDisplayName);
+    if (savedStream) setStream(savedStream);
   }, []);
 
-  // Handlers for state changes
-  const handleNumQuestionsChange = (e) => {
-    setNumQuestions(e.target.value);
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
+        const userDoc = await getDoc(doc(db, "users", currentUser.uid));
+        if (userDoc.exists()) {
+          setDisplayName(userDoc.data().displayName || "");
+        }
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const handleDisplayNameChange = async (e) => {
+    const newName = e.target.value;
+    setDisplayName(newName);
+
+    const currentUser = auth.currentUser;
+    if (currentUser) {
+      try {
+        await setDoc(doc(db, "users", currentUser.uid), { displayName: newName }, { merge: true });
+        setMessage("Display name updated ✅");
+        setTimeout(() => setMessage(""), 3000);
+      } catch (error) {
+        setMessage("Failed to update name ❌");
+      }
+    }
   };
 
-  const handleDifficultyChange = (e) => {
-    setDifficulty(e.target.value);
-  };
+  const handleUpdateSettings = async () => {
+  const currentUser = auth.currentUser;
 
-  const handleTimeLimitChange = (e) => {
-    setTimeLimit(e.target.value);
-  };
+  if (!currentUser) {
+    alert("User not logged in.");
+    return;
+  }
 
-  const handleDisplayNameChange = (e) => {
-    setDisplayName(e.target.value);
-  };
+  try {
+    // Save to Firestore
+    await setDoc(doc(db, "users", currentUser.uid), {
+      displayName,
+      stream,
+      quizPreferences: {
+        numQuestions,
+        difficulty,
+        timeLimit,
+      },
+    }, { merge: true });
 
-  const handleStreamChange = (e) => {
-    setStream(e.target.value);
-  };
+    // Save to localStorage
+    localStorage.setItem("numQuestions", numQuestions);
+    localStorage.setItem("difficulty", difficulty);
+    localStorage.setItem("timeLimit", timeLimit);
+    localStorage.setItem("displayName", displayName);
+    localStorage.setItem("stream", stream);
 
-  // Function to save all settings to localStorage
-  const handleUpdateSettings = () => {
-    localStorage.setItem('numQuestions', numQuestions);
-    localStorage.setItem('difficulty', difficulty);
-    localStorage.setItem('timeLimit', timeLimit);
-    localStorage.setItem('displayName', displayName);
-    localStorage.setItem('stream', stream);
-    alert('Settings updated successfully!'); // Provide feedback to the user
-    // In a real application, you might navigate back or refresh some data
-  };
+    // ✅ Reset form fields (UI only, does not affect saved data)
+    setDisplayName("");
+    setStream("none");
+    setNumQuestions(10);
+    setDifficulty("medium");
+    setTimeLimit("none");
 
-  // Function to navigate back (placeholder for actual navigation)
-  const handleGoBack = () => {
-    // This is a placeholder. In a real React application,
-    // you would typically use React Router's `useNavigate` hook:
-    // const navigate = useNavigate();
-    // navigate(-1); // Go back one step in history
-    alert('Going back!'); // For demonstration
-    console.log('Navigating back...');
-  };
+    // Optional feedback
+    setMessage("Settings updated successfully ✅");
 
-  // Helper function for consistent input/select styling
+    // Optional: Redirect after short delay
+    setTimeout(() => {
+      setMessage("");
+      navigate("/HomePage");
+    }, 1000);
+  } catch (error) {
+    alert("Failed to update settings. Try again.");
+    console.error(error);
+  }
+};
+
+
   const getInputClassNames = () =>
-    `w-full p-3 border rounded-md focus:outline-none focus:ring-2 bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500`;
+    `w-full p-3 border rounded-md focus:outline-none focus:ring-2 ${
+      isLightMode
+        ? "bg-white border-gray-300 text-black placeholder-gray-500 focus:ring-blue-500"
+        : "bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500"
+    }`;
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-8">
+    <div className={`${isLightMode ? "bg-white text-black" : "bg-gray-900 text-white"} min-h-screen p-8`}>
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-center">Settings</h1>
 
         {/* User Profile Section */}
-        <section className="bg-gray-800 shadow-lg rounded-lg p-6 mb-8">
+        <section className={`${isLightMode ? "bg-gray-100" : "bg-gray-800"} shadow-lg rounded-lg p-6 mb-8`}>
           <h2 className="text-2xl font-semibold mb-4">User Profile</h2>
 
           <div className="mb-6">
@@ -112,6 +149,7 @@ const Settings = () => {
               placeholder="Enter your display name"
               className={getInputClassNames()}
             />
+            {message && <p className="mt-2 text-sm text-green-500">{message}</p>}
           </div>
 
           <div className="mb-6">
@@ -121,7 +159,7 @@ const Settings = () => {
             <select
               id="stream"
               value={stream}
-              onChange={handleStreamChange}
+              onChange={(e) => setStream(e.target.value)}
               className={getInputClassNames()}
             >
               {availableStreams.map((option) => (
@@ -134,7 +172,7 @@ const Settings = () => {
         </section>
 
         {/* Quiz Preferences Section */}
-        <section className="bg-gray-800 shadow-lg rounded-lg p-6 mb-8">
+        <section className={`${isLightMode ? "bg-gray-100" : "bg-gray-800"} shadow-lg rounded-lg p-6 mb-8`}>
           <h2 className="text-2xl font-semibold mb-4">Quiz Preferences</h2>
 
           <div className="mb-6">
@@ -144,7 +182,7 @@ const Settings = () => {
             <select
               id="numQuestions"
               value={numQuestions}
-              onChange={handleNumQuestionsChange}
+              onChange={(e) => setNumQuestions(e.target.value)}
               className={getInputClassNames()}
             >
               <option value="5">5</option>
@@ -161,7 +199,7 @@ const Settings = () => {
             <select
               id="difficulty"
               value={difficulty}
-              onChange={handleDifficultyChange}
+              onChange={(e) => setDifficulty(e.target.value)}
               className={getInputClassNames()}
             >
               <option value="easy">Easy</option>
@@ -177,7 +215,7 @@ const Settings = () => {
             <select
               id="timeLimit"
               value={timeLimit}
-              onChange={handleTimeLimitChange}
+              onChange={(e) => setTimeLimit(e.target.value)}
               className={getInputClassNames()}
             >
               <option value="none">None</option>
@@ -194,11 +232,11 @@ const Settings = () => {
             onClick={handleUpdateSettings}
             className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105"
           >
-            Update Settings
+            Save & Go Back
           </button>
           <button
-            onClick={handleGoBack}
-            className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105"
+            onClick={() => navigate(-1)}
+            className={`${isLightMode ? "bg-gray-300 hover:bg-gray-400 text-black" : "bg-gray-600 hover:bg-gray-700 text-white"} font-bold py-3 px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105`}
           >
             Back
           </button>
