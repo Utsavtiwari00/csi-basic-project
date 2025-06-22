@@ -6,6 +6,8 @@ import SignInPage from './component/SignInPage'
 import Profile from './component/profile'
 import Settings from './component/settings'
 import HomePage from './component/HomePage'
+import Notes_Page from './component/Notes'
+import Chapter from './component/chapter'
 
 
 const App = () => {
@@ -20,11 +22,14 @@ const App = () => {
 
       <Route path="/" element={<LandingPage />} />
 
-      <Route path="/signin" element={<SignInPage />}/>
+      <Route path="/signin" element={<SignInPage/>}/>
 
       <Route path="/profile" element={<Profile/>}/>
 
       <Route path="/settings" element={<Settings/>}/>
+      <Route path="/notes" element={<Notes_Page/>}/>
+      <Route path="/chap/:subject" element={<Chapter/>}/>
+      <Route path="/notes/:examType" element={<Chapter />} />
       
     </Routes>
     </Router>
