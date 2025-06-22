@@ -21,7 +21,7 @@ const Notes_Page = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"> {/* Adjusted grid for better spacing */}
               {["JEE", "NEET", "NCERT"].map((exam, idx) => (
                 <div
-                  // Changed navigation to /notes/exam_type
+                  
                   onClick={() => navigate(`/notes/${exam.replace(/\s+/g, "").toLowerCase()}`)}
                   key={idx}
                   className={`rounded-lg p-6 flex flex-col items-center justify-center text-center transition-colors duration-200 cursor-pointer shadow-lg

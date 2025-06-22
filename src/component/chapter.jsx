@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const Chapter = () => { // Component name is now 'Chapter'
+const Chapter = () => { 
   const { examType } = useParams();
   const navigate = useNavigate();
   const [isLightMode, setIsLightMode] = useState(() => {
@@ -232,14 +232,8 @@ const allChapters = {
 
   const chaptersForExam = allChapters[examType] || [];
 
-  const handleDownload = (fileUrl) => {
-    const link = document.createElement('a');
-    link.href = fileUrl;
-    link.setAttribute('download', fileUrl.substring(fileUrl.lastIndexOf('/') + 1));
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    alert(`Downloading ${fileUrl.substring(fileUrl.lastIndexOf('/') + 1)}`);
+  const handleDownload = () => {
+        alert("Working!");
   };
 
   return (
