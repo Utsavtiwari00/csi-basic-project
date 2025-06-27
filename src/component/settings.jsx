@@ -5,17 +5,13 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 
 const Settings = () => {
+ 
   const navigate = useNavigate();
   const auth = getAuth();
   const [user, setUser] = useState(null);
-  const [isLightMode, setIsLightMode] = useState(() => localStorage.getItem("theme") === "light");
-
-  // Quiz preferences
   const [numQuestions, setNumQuestions] = useState(10);
   const [difficulty, setDifficulty] = useState('medium');
-  const [timeLimit, setTimeLimit] = useState('none');
-
-  // User profile
+  const [timeLimit, setTimeLimit] = useState('none')
   const [displayName, setDisplayName] = useState('');
   const [stream, setStream] = useState('none');
   const [message, setMessage] = useState("");
@@ -73,68 +69,55 @@ const Settings = () => {
   };
 
   const handleUpdateSettings = async () => {
-  const currentUser = auth.currentUser;
+    const currentUser = auth.currentUser;
 
-  if (!currentUser) {
-    alert("User not logged in.");
-    return;
-  }
+    if (!currentUser) {
+      alert("User not logged in.");
+      return;
+    }
 
-  try {
-    // Save to Firestore
-    await setDoc(doc(db, "users", currentUser.uid), {
-      displayName,
-      stream,
-      quizPreferences: {
-        numQuestions,
-        difficulty,
-        timeLimit,
-      },
-    }, { merge: true });
+    try {
+      await setDoc(doc(db, "users", currentUser.uid), {
+        displayName,
+        stream,
+        quizPreferences: {
+          numQuestions,
+          difficulty,
+          timeLimit,
+        },
+      }, { merge: true });
 
-    // Save to localStorage
-    localStorage.setItem("numQuestions", numQuestions);
-    localStorage.setItem("difficulty", difficulty);
-    localStorage.setItem("timeLimit", timeLimit);
-    localStorage.setItem("displayName", displayName);
-    localStorage.setItem("stream", stream);
+      localStorage.setItem("numQuestions", numQuestions);
+      localStorage.setItem("difficulty", difficulty);
+      localStorage.setItem("timeLimit", timeLimit);
+      localStorage.setItem("displayName", displayName);
+      localStorage.setItem("stream", stream);
 
-    // ✅ Reset form fields (UI only, does not affect saved data)
-    setDisplayName("");
-    setStream("none");
-    setNumQuestions(10);
-    setDifficulty("medium");
-    setTimeLimit("none");
+      setDisplayName("");
+      setStream("none");
+      setNumQuestions(10);
+      setDifficulty("medium");
+      setTimeLimit("none");
 
-    // Optional feedback
-    setMessage("Settings updated successfully ✅");
+      setMessage("Settings updated successfully ✅");
 
-    // Optional: Redirect after short delay
-    setTimeout(() => {
-      setMessage("");
-      navigate("/HomePage");
-    }, 1000);
-  } catch (error) {
-    alert("Failed to update settings. Try again.");
-    console.error(error);
-  }
-};
-
-
-  const getInputClassNames = () =>
-    `w-full p-3 border rounded-md focus:outline-none focus:ring-2 ${
-      isLightMode
-        ? "bg-white border-gray-300 text-black placeholder-gray-500 focus:ring-blue-500"
-        : "bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:ring-blue-500"
-    }`;
+      setTimeout(() => {
+        setMessage("");
+        navigate("/HomePage");
+      }, 1000);
+    } catch (error) {
+      alert("Failed to update settings. Try again.");
+      console.error(error);
+    }
+  };
 
   return (
-    <div className={`${isLightMode ? "bg-white text-black" : "bg-gray-900 text-white"} min-h-screen p-8`}>
+    <div className="min-h-screen bg-base-100 text-base-content p-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-center">Settings</h1>
 
         {/* User Profile Section */}
-        <section className={`${isLightMode ? "bg-gray-100" : "bg-gray-800"} shadow-lg rounded-lg p-6 mb-8`}>
+        <section className="bg-base-200 shadow-lg rounded-lg p-6 mb-8">
           <h2 className="text-2xl font-semibold mb-4">User Profile</h2>
 
           <div className="mb-6">
@@ -147,9 +130,9 @@ const Settings = () => {
               value={displayName}
               onChange={handleDisplayNameChange}
               placeholder="Enter your display name"
-              className={getInputClassNames()}
+              className="input input-bordered w-full"
             />
-            {message && <p className="mt-2 text-sm text-green-500">{message}</p>}
+            {message && <p className="mt-2 text-sm text-success">{message}</p>}
           </div>
 
           <div className="mb-6">
@@ -160,7 +143,7 @@ const Settings = () => {
               id="stream"
               value={stream}
               onChange={(e) => setStream(e.target.value)}
-              className={getInputClassNames()}
+              className="select select-bordered w-full"
             >
               {availableStreams.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -172,7 +155,7 @@ const Settings = () => {
         </section>
 
         {/* Quiz Preferences Section */}
-        <section className={`${isLightMode ? "bg-gray-100" : "bg-gray-800"} shadow-lg rounded-lg p-6 mb-8`}>
+        <section className="bg-base-200 shadow-lg rounded-lg p-6 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Quiz Preferences</h2>
 
           <div className="mb-6">
@@ -183,7 +166,7 @@ const Settings = () => {
               id="numQuestions"
               value={numQuestions}
               onChange={(e) => setNumQuestions(e.target.value)}
-              className={getInputClassNames()}
+              className="select select-bordered w-full"
             >
               <option value="5">5</option>
               <option value="10">10</option>
@@ -200,7 +183,7 @@ const Settings = () => {
               id="difficulty"
               value={difficulty}
               onChange={(e) => setDifficulty(e.target.value)}
-              className={getInputClassNames()}
+              className="select select-bordered w-full"
             >
               <option value="easy">Easy</option>
               <option value="medium">Medium</option>
@@ -216,7 +199,7 @@ const Settings = () => {
               id="timeLimit"
               value={timeLimit}
               onChange={(e) => setTimeLimit(e.target.value)}
-              className={getInputClassNames()}
+              className="select select-bordered w-full"
             >
               <option value="none">None</option>
               <option value="15">15 seconds</option>
@@ -226,17 +209,19 @@ const Settings = () => {
           </div>
         </section>
 
+      
+
         {/* Action Buttons */}
         <div className="flex justify-end gap-4 mt-8">
           <button
             onClick={handleUpdateSettings}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105"
+            className="btn btn-primary"
           >
             Save & Go Back
           </button>
           <button
             onClick={() => navigate(-1)}
-            className={`${isLightMode ? "bg-gray-300 hover:bg-gray-400 text-black" : "bg-gray-600 hover:bg-gray-700 text-white"} font-bold py-3 px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105`}
+            className="btn btn-neutral"
           >
             Back
           </button>

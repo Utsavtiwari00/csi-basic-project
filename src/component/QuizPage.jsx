@@ -5,14 +5,13 @@ import { BlockMath, InlineMath } from 'react-katex';
 import he from 'he';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { auth, db } from '../../firebase/firebase'; 
-
-
+import {useThemeStore} from "../store/useThemeStore"
 
 const QuizPage = () => {
   const { subject } = useParams();
   const navigate = useNavigate();
 
-  const [isLightMode, setIsLightMode] = useState(false);
+  const {theme} = useThemeStore();
   const [allQuestions, setAllQuestions] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [numQuestions, setNumQuestions] = useState(5); 
@@ -25,10 +24,6 @@ const QuizPage = () => {
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
 
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    setIsLightMode(storedTheme === "light");
-  }, []);
 
   useEffect(() => {
     if (!subject) return;
@@ -64,16 +59,15 @@ const QuizPage = () => {
   };
 
   const goToNext = () => {
-   if (currentQuestionIndex < questions.length - 1) {
-  setCurrentQuestionIndex(currentQuestionIndex + 1);
-  setSelectedOption(null);
-  setShowFeedback(false);
-  setIsCorrect(null);
-} else {
-  setShowResult(true);
-  updateQuizStats(questions.length, score); 
-}
-
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setSelectedOption(null);
+      setShowFeedback(false);
+      setIsCorrect(null);
+    } else {
+      setShowResult(true);
+      updateQuizStats(questions.length, score); 
+    }
   };
 
   const currentQuestion = questions[currentQuestionIndex];
@@ -87,244 +81,215 @@ const QuizPage = () => {
     const m = Math.floor(elapsed / 60);
     const s = String(elapsed % 60).padStart(2, "0");
     return (
-      <p>
+      <p className="text-base-content">
         ⏱️ {m}:{s}
       </p>
     );
   };
+
   const updateQuizStats = async (attempted, correct) => {
-  const user = auth.currentUser;
-  if (!user) return; 
+    const user = auth.currentUser;
+    if (!user) return; 
 
-  const userRef = doc(db, "users", user.uid);
-  const userSnap = await getDoc(userRef);
+    const userRef = doc(db, "users", user.uid);
+    const userSnap = await getDoc(userRef);
 
-  if (userSnap.exists()) {
-    const data = userSnap.data();
-    const updatedAttempted = (data.totalAttempted || 0) + attempted;
-    const updatedCorrect = (data.totalCorrect || 0) + correct;
+    if (userSnap.exists()) {
+      const data = userSnap.data();
+      const updatedAttempted = (data.totalAttempted || 0) + attempted;
+      const updatedCorrect = (data.totalCorrect || 0) + correct;
 
-    await setDoc(userRef, {
-      ...data,
-      totalAttempted: updatedAttempted,
-      totalCorrect: updatedCorrect,
+      await setDoc(userRef, {
+        ...data,
+        totalAttempted: updatedAttempted,
+        totalCorrect: updatedCorrect,
+      });
+    } else {
+      await setDoc(userRef, {
+        totalAttempted: attempted,
+        totalCorrect: correct,
+      });
+    }
+  };
+
+  const renderContent = (text) => {
+    if (!text) return null;
+
+    let decoded = he.decode(text);
+    decoded = decoded.replace(/\n/g, '<br/>');
+    decoded = decoded.replace(/\<sup\>\$\$(.*?)\$\$\<\/sup\>/g, (_, match) => {
+      return `<sup>${match}</sup>`;
     });
-  } else {
-    await setDoc(userRef, {
-      totalAttempted: attempted,
-      totalCorrect: correct,
-    });
-  }
-};
 
+    const latexRegex = /\$\$([^$]+)\$\$/g;
+    const parts = decoded.split(latexRegex);
 
-
-const renderContent = (text) => {
-  if (!text) return null;
-
- 
-  let decoded = he.decode(text);
-
- 
-  decoded = decoded.replace(/\n/g, '<br/>');
-
- 
-  decoded = decoded.replace(/\<sup\>\$\$(.*?)\$\$\<\/sup\>/g, (_, match) => {
-    return `<sup>${match}</sup>`;
-  });
-
- 
-  const latexRegex = /\$\$([^$]+)\$\$/g;
-  const parts = decoded.split(latexRegex);
-
-  return parts.map((part, i) =>
-    i % 2 === 0
-      ? <span key={i} dangerouslySetInnerHTML={{ __html: part }} />
-      : <InlineMath key={i} math={part.trim()} />
-  );
-};
-
-
-
+    return parts.map((part, i) =>
+      i % 2 === 0
+        ? <span key={i} dangerouslySetInnerHTML={{ __html: part }} />
+        : <InlineMath key={i} math={part.trim()} />
+    );
+  };
 
   if (!quizStarted) {
     return (
-      <div
-        className={`min-h-screen flex flex-col items-center justify-center ${
-          isLightMode ? "bg-white text-black" : "bg-gray-900 text-white"
-        }`}
-      >
-        <h1 className="text-2xl font-bold mb-4">Select number of questions</h1>
-        <select
-          value={numQuestions}
-          onChange={(e) => setNumQuestions(Number(e.target.value))}
-          className={`mb-6 p-2 rounded-md border border-gray-400 ${ isLightMode ? "text-black bg-white" : "text-white bg-gray-900"}`}
-        >
-          <option value={5}>5 Questions</option>
-          <option value={10}>10 Questions</option>
-          <option value={20}>20 Questions</option>
-        </select>
-        <button
-          onClick={startQuiz}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
-        >
-          Start Quiz
-        </button>
+      <div className="min-h-screen bg-base-200 flex flex-col items-center justify-center">
+        <div className="card w-96 bg-base-100 shadow-xl">
+          <div className="card-body items-center text-center">
+            <h1 className="card-title text-2xl mb-4">Select number of questions</h1>
+            <select
+              value={numQuestions}
+              onChange={(e) => setNumQuestions(Number(e.target.value))}
+              className="select select-bordered w-full max-w-xs mb-6"
+            >
+              <option value={5}>5 Questions</option>
+              <option value={10}>10 Questions</option>
+              <option value={20}>20 Questions</option>
+            </select>
+            <button
+              onClick={startQuiz}
+              className="btn btn-primary"
+            >
+              Start Quiz
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
-  
-
 
   if (!currentQuestion) {
     return (
-      <div
-        className={`min-h-screen flex items-center justify-center ${
-          isLightMode ? "bg-white text-black" : "bg-gray-900 text-white"
-        }`}
-      >
-        Loading...
+      <div className="min-h-screen bg-base-200 flex items-center justify-center">
+        <div className="loading loading-spinner loading-lg"></div>
       </div>
     );
   }
 
   return (
-    <div
-      className={`min-h-screen ${
-        isLightMode ? "bg-white text-black" : "bg-gray-900 text-white"
-      }`}
-    >
-      <header className="border-b sticky top-0 p-4 backdrop-blur-sm z-10">
-        <p className="text-lg font-semibold">Subject: {subject}</p>
+    <div className="min-h-screen bg-base-200">
+      <header className="navbar bg-base-100 shadow-sm sticky top-0 z-10">
+        <div className="flex-1">
+          <p className="text-lg font-semibold">Subject: {subject}</p>
+        </div>
       </header>
 
-      <section className="mt-10 max-w-3xl mx-auto px-4">
+      <section className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="flex justify-between items-center mb-6">
           <Timer />
-          <p className="text-lg">
+          <p className="text-lg text-base-content">
             Question {currentQuestionIndex + 1} of {questions.length}
           </p>
         </div>
 
         {showResult ? (
-          <div
-            className={`${
-              isLightMode ? "bg-gray-100" : "bg-gray-800"
-            } text-center p-8 rounded-lg shadow`}
-          >
-            <h2 className="text-3xl font-bold mb-4">Quiz Completed!</h2>
-            <p className="text-2xl">
-              Your Score: {score} / {questions.length}
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
-            >
-              Retake Quiz
-            </button>
-            <button
-              onClick={() => navigate("/HomePage")}
-              className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
-            >
-              Home
-            </button>
+          <div className="card bg-base-100 shadow-xl">
+            <div className="card-body text-center">
+              <h2 className="card-title text-3xl justify-center mb-4">Quiz Completed!</h2>
+              <p className="text-2xl mb-6">
+                Your Score: <span className="font-bold text-primary">{score}</span> / {questions.length}
+              </p>
+              <div className="card-actions justify-center gap-4">
+                <button
+                  onClick={() => window.location.reload()}
+                  className="btn btn-primary"
+                >
+                  Retake Quiz
+                </button>
+                <button
+                  onClick={() => navigate("/HomePage")}
+                  className="btn btn-secondary"
+                >
+                  Home
+                </button>
+              </div>
+            </div>
           </div>
         ) : (
-          <div>
-           <p className="mb-6 text-lg">{renderContent(currentQuestion.question)}</p>
-
-
-            <div className="space-y-4">
-              {currentQuestion.options.map((option, index) => (
-                <button
-                  key={index}
-                  disabled={showFeedback}
-                  onClick={() => handleOptionSelect(option)}
-                  className={`flex items-center w-full p-3 border rounded-md shadow-sm transition-colors
-    ${
-      selectedOption === option
-        ? isCorrect
-          ? "bg-green-700 border-green-500 text-white"
-          : "bg-red-700 border-red-500 text-white"
-        : showFeedback &&
-          option === currentQuestion.options[currentQuestion.answerIndex]
-        ? "bg-green-600 border-green-400 text-white"
-        : isLightMode
-        ? "bg-gray-200 border-violet-400 text-black hover:bg-gray-300"
-        : "bg-gray-800 border-violet-400 text-gray-300 hover:bg-gray-700"
-    }
-    ${showFeedback ? "cursor-not-allowed" : "cursor-pointer"}`}
-                >
-                  <span
-                    className={`w-8 h-8 flex items-center justify-center rounded-l-md mr-3 font-semibold
-    ${
-      selectedOption === option
-        ? isCorrect
-          ? "bg-green-500 text-white"
-          : "bg-red-500 text-white"
-        : showFeedback &&
-          option === currentQuestion.options[currentQuestion.answerIndex]
-        ? "bg-green-400 text-white"
-        : "bg-teal-100 text-teal-700"
-    }`}
-                  >
-                    {index + 1}
-                  </span>
-                 {renderContent(option)}
-
-                </button>
-              ))}
-            </div>
-
-            {showFeedback && (
-              <div
-                className={`mt-6 p-4 rounded-lg ${
-                  isCorrect
-                    ? "bg-green-800 text-green-100"
-                    : "bg-red-800 text-red-100"
-                }`}
-              >
-                <h3 className="font-bold text-xl mb-2">
-                  {isCorrect ? "Correct!" : "Incorrect."}
-                </h3>
-                {!isCorrect && (
-                  <p className="mb-2">
-                    Correct Answer:{" "}
-                    <strong>
-                      {renderContent(currentQuestion.options[currentQuestion.answerIndex])}
-                    </strong>
-                  </p>
-                )}
-                {currentQuestion.explanation && (
-                  <>
-                    <h4 className="font-semibold mb-1">Explanation:</h4>
-                    <p>{renderContent(currentQuestion.explanation)}</p>
-                  </>
-                )}
+          <div className="card bg-base-100 shadow-xl">
+            <div className="card-body">
+              <div className="mb-6">
+                <h2 className="text-xl font-medium mb-4">{renderContent(currentQuestion.question)}</h2>
               </div>
-            )}
 
-            <div className="mt-8 flex justify-between items-center">
-              <button
-                onClick={() => navigate("/HomePage")}
-                className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg"
-              >
-                Exit Quiz
-              </button>
-              <button
-                onClick={goToNext}
-                disabled={!showFeedback}
-                className={`px-6 py-3 rounded-lg text-lg font-medium transition-colors
-                  ${
-                    !showFeedback
-                      ? "bg-gray-600 text-gray-400 cursor-not-allowed"
-                      : "bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
-                  }`}
-              >
-                {currentQuestionIndex === questions.length - 1
-                  ? "View Result"
-                  : "Next Question"}
-              </button>
+              <div className="space-y-4">
+                {currentQuestion.options.map((option, index) => (
+                  <button
+                    key={index}
+                    disabled={showFeedback}
+                    onClick={() => handleOptionSelect(option)}
+                    className={`btn btn-outline w-full justify-start text-left p-4 h-auto min-h-[3rem] transition-all
+                      ${selectedOption === option
+                        ? isCorrect
+                          ? "btn-success"
+                          : "btn-error"
+                        : showFeedback &&
+                          option === currentQuestion.options[currentQuestion.answerIndex]
+                        ? "btn-success"
+                        : "hover:btn-primary"
+                      }
+                      ${showFeedback ? "cursor-not-allowed" : "cursor-pointer"}`}
+                  >
+                    <span
+                      className={`badge badge-lg mr-3 font-semibold
+                        ${selectedOption === option
+                          ? isCorrect
+                            ? "badge-success"
+                            : "badge-error"
+                          : showFeedback &&
+                            option === currentQuestion.options[currentQuestion.answerIndex]
+                          ? "badge-success"
+                          : "badge-primary"
+                        }`}
+                    >
+                      {index + 1}
+                    </span>
+                    <span className="flex-1">{renderContent(option)}</span>
+                  </button>
+                ))}
+              </div>
+
+              {showFeedback && (
+                <div className={`alert ${isCorrect ? "alert-success" : "alert-error"} mt-6`}>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">
+                      {isCorrect ? "Correct!" : "Incorrect."}
+                    </h3>
+                    {!isCorrect && (
+                      <p className="mb-2">
+                        Correct Answer:{" "}
+                        <strong>
+                          {renderContent(currentQuestion.options[currentQuestion.answerIndex])}
+                        </strong>
+                      </p>
+                    )}
+                    {currentQuestion.explanation && (
+                      <div className="mt-3">
+                        <h4 className="font-semibold mb-1">Explanation:</h4>
+                        <p>{renderContent(currentQuestion.explanation)}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              <div className="card-actions justify-between mt-8">
+                <button
+                  onClick={() => navigate("/HomePage")}
+                  className="btn btn-error"
+                >
+                  Exit Quiz
+                </button>
+                <button
+                  onClick={goToNext}
+                  disabled={!showFeedback}
+                  className={`btn ${!showFeedback ? "btn-disabled" : "btn-primary"}`}
+                >
+                  {currentQuestionIndex === questions.length - 1
+                    ? "View Result"
+                    : "Next Question"}
+                </button>
+              </div>
             </div>
           </div>
         )}

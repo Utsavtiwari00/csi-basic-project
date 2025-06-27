@@ -5,15 +5,14 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import Profile from "./profile";
 import Sidebar from "./Sidebar";
+import { useThemeStore } from '../store/useThemeStore';
 
 const HomePage = () => {
+  const { theme } = useThemeStore();
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [displayName, setDisplayName] = useState("");
   const [showProfile, setShowProfile] = useState(false);
-  const [isLightMode, setIsLightMode] = useState(() => {
-    return localStorage.getItem("theme") === "light";
-  });
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (currentUser) => {
@@ -33,21 +32,12 @@ const HomePage = () => {
     return () => unsub();
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem("theme", isLightMode ? "light" : "dark");
-  }, [isLightMode]);
-
   const toNotes = () => {
     navigate("/notes");
   };
 
   return (
-    <div
-      className={`flex min-h-screen ${
-        isLightMode ? "bg-white text-black" : "bg-gray-900 text-white"
-      }`}
-    >
-      {/* Sidebar */}
+    <div className="flex min-h-screen bg-base-100 text-base-content" data-theme={theme}>
       <Sidebar
         displayName={displayName}
         onShowProfile={() => setShowProfile(true)}
@@ -55,107 +45,74 @@ const HomePage = () => {
           await signOut(auth);
           navigate("/SignIn");
         }}
-        isLightMode={isLightMode}
-        setIsLightMode={setIsLightMode}
       />
 
-      {/* Main Content */}
       <main className="flex-1 p-8 overflow-y-auto">
+        {/* Exam wise PYQ Bank Section */}
         <div className="mb-10">
           <h1 className="text-4xl font-bold mb-4">Exam wise PYQ Bank</h1>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {["JEE Main", "JEE Advanced", "NEET"].map((exam, idx) => (
               <div
-                onClick={()=>navigate(`/quiz/${exam.replace(/\s+/g, "").toLowerCase()}`)}
+                onClick={() => navigate(`/quiz/${exam.replace(/\s+/g, "").toLowerCase()}`)}
                 key={idx}
-                className={`rounded-lg p-4 flex flex-col items-center justify-center text-center transition-colors duration-200 cursor-pointer ${
-                  isLightMode
-                    ? "bg-gray-100 hover:bg-gray-200 text-black"
-                    : "bg-gray-800 hover:bg-gray-700 text-white"
-                }`}
+                className="card bg-base-200 hover:bg-base-300 cursor-pointer transition-colors duration-200"
               >
-                <div className="text-lg font-semibold mb-2">{exam}</div>
+                <div className="card-body items-center text-center p-4">
+                  <div className="text-lg font-semibold">{exam}</div>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
+        {/* Subject wise PYQ Bank Section */}
         <div className="mb-10">
           <h1 className="text-4xl font-bold mb-4">Subject wise PYQ Bank</h1>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {["Physics", "Chemistry", "Mathematics", "Botany", "Zoology"].map(
               (subject, idx) => (
                 <div
-                onClick={() => navigate(`/quiz/${subject.toLowerCase()}`)}
+                  onClick={() => navigate(`/quiz/${subject.toLowerCase()}`)}
                   key={idx}
-                  className={`rounded-lg p-4 flex flex-col items-center justify-center text-center transition-colors duration-200 cursor-pointer ${
-                    isLightMode
-                      ? "bg-gray-100 hover:bg-gray-200 text-black"
-                      : "bg-gray-800 hover:bg-gray-700 text-white"
-                  }`}
+                  className="card bg-base-200 hover:bg-base-300 cursor-pointer transition-colors duration-200"
                 >
-                  <div className="text-lg font-semibold mb-2">{subject}</div>
+                  <div className="card-body items-center text-center p-4">
+                    <div className="text-lg font-semibold">{subject}</div>
+                  </div>
                 </div>
               )
             )}
           </div>
         </div>
+
         {/* Concept-wise Notes Section */}
-        <div
-          className={`mb-10 p-6 rounded-xl ${
-            isLightMode ? "bg-gray-100" : "bg-gray-800"
-          }`}
-        >
-          <h2 className="text-2xl font-semibold mb-4">Concept-wise Notes</h2>
-          <input
-            type="text"
-            placeholder="Get clarity on any topic"
-            className={`w-full p-3 rounded-lg border focus:outline-none ${
-              isLightMode
-                ? "bg-white text-black border-gray-300 placeholder-gray-500"
-                : "bg-gray-900 text-white border-gray-700 placeholder-gray-400"
-            }`}
-          />
+        <div className="card bg-base-200 mb-10">
+          <div className="card-body">
+            <h2 className="card-title text-2xl mb-4">Concept-wise Notes</h2>
+            <input
+              type="text"
+              placeholder="Get clarity on any topic"
+              className="input input-bordered w-full"
+            />
+          </div>
         </div>
 
-        {/* Download Notes CTA */}
+        {/* Download Notes Section */}
         <div
           onClick={toNotes}
-          className={`p-6 rounded-xl flex items-center justify-between cursor-pointer transition-colors ${
-            isLightMode
-              ? "bg-gradient-to-r from-gray-200 to-gray-300 hover:from-gray-300 hover:to-gray-400"
-              : "bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700"
-          }`}
+          className="card bg-gradient-to-r from-primary/20 to-secondary/20 hover:from-primary/30 hover:to-secondary/30 cursor-pointer transition-all"
         >
-          <div>
-            <p
-              className={`font-bold text-lg ${
-                isLightMode ? "text-black" : "text-white"
-              }`}
-            >
-              Download Notes
-            </p>
-            <p
-              className={`text-sm ${
-                isLightMode ? "text-gray-700" : "text-gray-300"
-              }`}
-            >
-              Access concept-wise notes instantly 📚
-            </p>
+          <div className="card-body flex-row items-center justify-between">
+            <div>
+              <p className="font-bold text-lg">Download Notes</p>
+              <p className="text-sm opacity-70">Access concept-wise notes instantly 📚</p>
+            </div>
+            <button className="btn btn-primary">View</button>
           </div>
-          <button
-            className={`text-sm px-4 py-2 rounded-lg ${
-              isLightMode
-                ? "bg-blue-500 hover:bg-blue-600 text-white"
-                : "bg-blue-600 hover:bg-blue-700 text-white"
-            }`}
-          >
-            View
-          </button>
         </div>
       </main>
 
-      {/* Profile Modal */}
       {showProfile && (
         <Profile
           isVisible={showProfile}

@@ -10,62 +10,71 @@ import {
   Settings
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useThemeStore } from '../store/useThemeStore';
 
-const Sidebar = ({ displayName, onShowProfile, onLogout, isLightMode, setIsLightMode }) => {
-    const navigate = useNavigate();
+const Sidebar = ({ displayName, onShowProfile, onLogout }) => {
+  const { theme, setTheme } = useThemeStore();
+  const navigate = useNavigate();
+  
   const toSettings = () => {
     navigate('/settings');
   };
-  const toHome=()=>{
+  
+  const toHome = () => {
     navigate('/HomePage');
   };
+
+  const toggleTheme = () => {
+    const currentIndex = ['light', 'dark'].indexOf(theme);
+    const nextTheme = currentIndex === 0 ? 'dark' : 'light';
+    setTheme(nextTheme);
+  };
+
   return (
-    <aside className={`w-64 ${isLightMode ? 'bg-gray-100 text-black' : 'bg-gray-950 text-white'} border-r border-gray-800 flex flex-col justify-between py-6 px-4`}>
+    <aside className="w-64 bg-base-200 border-r border-base-300 flex flex-col justify-between py-6 px-4">
       <div className="space-y-6">
-        <div className="font-bold text-2xl mb-6">Examprep</div>
+        <div className="font-bold text-2xl mb-6 text-primary">Examprep</div>
         <nav className="space-y-4">
-          <button 
-          onClick={toHome}
-          className="flex items-center gap-3 hover:text-blue-500">
+          <button
+            onClick={toHome}
+            className="flex items-center gap-3 text-base-content hover:text-primary transition-colors"
+          >
             <Home className="w-5 h-5" /> Home
           </button>
-          <button className="flex items-center gap-3 text-gray-500 hover:text-blue-500">
+          <button className="flex items-center gap-3 text-base-content/60 hover:text-primary transition-colors">
             <ClipboardList className="w-5 h-5" /> Tests
           </button>
-          <button 
-          onClick={onShowProfile}
-          className="flex items-center gap-3 text-gray-500 hover:text-blue-500">
+          <button
+            onClick={onShowProfile}
+            className="flex items-center gap-3 text-base-content/60 hover:text-primary transition-colors"
+          >
             <User className="w-5 h-5" /> Profile
           </button>
           <button
-          onClick={toSettings}
-          className="flex items-center gap-3 text-gray-500 hover:text-blue-500">
+            onClick={toSettings}
+            className="flex items-center gap-3 text-base-content/60 hover:text-primary transition-colors"
+          >
             <Settings className="w-5 h-5" /> Settings
           </button>
           <button
-            onClick={() => setIsLightMode(!isLightMode)}
-            className="flex items-center gap-3 text-gray-500 hover:text-blue-500"
+            onClick={()=>navigate("/themes")}
+            className="flex items-center gap-3 text-base-content/60 hover:text-primary transition-colors"
           >
-            <Lightbulb className="w-5 h-5" /> {isLightMode ? "Dark Mode" : "Light Mode"}
+            <Lightbulb className="w-5 h-5" /> Toggle Theme
           </button>
         </nav>
       </div>
-
-      {/* Profile avatar & logout */}
+      
       <div className="space-y-4">
-        <div
-          className={`flex items-center gap-3 cursor-pointer p-2 rounded-md transition-colors ${
-  isLightMode ? "hover:bg-gray-200 text-black" : "hover:bg-gray-800 text-white"
-}`}
-        >
-          <div className="w-8 h-8 bg-blue-600 text-white flex items-center justify-center rounded-full font-bold">
+        <div className="flex items-center gap-3 p-2 rounded-md  transition-colors">
+          <div className="w-8 h-8 bg-primary text-primary-content flex items-center justify-center rounded-full font-bold">
             {displayName?.[0]?.toUpperCase() || 'U'}
           </div>
-          <span>{displayName || 'User'}</span>
+          <span className="text-base-content">{displayName || 'User'}</span>
         </div>
         <button
           onClick={onLogout}
-          className="flex items-center gap-3 text-red-400 hover:text-red-500"
+          className="flex items-center gap-3 text-error hover:text-error/80 transition-colors"
         >
           <LogOut className="w-5 h-5" /> Logout
         </button>

@@ -1,29 +1,44 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Lightbulb } from "lucide-react";
 
 const LandingPage = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/SignIn"); // Or use "/signup" if separate
+    navigate("/SignIn");
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center px-4">
-      <div className="text-center max-w-xl">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
-          Welcome to <span className="text-blue-500">Examprep</span>
-        </h1>
-        <p className="text-gray-300 text-lg md:text-xl mb-8">
-          Your personalized quiz platform to track accuracy, improve performance, and prep like a pro.
-        </p>
+    <div className="min-h-screen flex flex-col bg-base-200">
+      
+      <header className="w-full flex justify-end p-4">
         <button
-          onClick={handleGetStarted}
-          className="bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold py-3 px-8 rounded-xl transition-all duration-300 ease-in-out shadow-lg hover:shadow-blue-500/50"
+          onClick={() => navigate("/themes")}
+          className="flex items-center gap-2 text-base-content hover:text-primary transition-colors"
         >
-          Get Started
+          <Lightbulb className="w-5 h-5" /> 
+          Toggle Theme
         </button>
-      </div>
+      </header>
+
+      <main className="flex-grow flex items-center justify-center px-4">
+        <div className="text-center max-w-xl">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight text-base-content">
+            Welcome to <span className="text-primary">Examprep</span>
+          </h1>
+          <p className="text-lg md:text-xl mb-8 text-base-content/70">
+            Your personalized quiz platform to track accuracy, improve performance, and prep like a pro.
+          </p>
+          <button
+            onClick={handleGetStarted}
+            className="btn btn-primary text-lg"
+          >
+            Get Started
+          </button>
+        </div>
+      </main>
+
     </div>
   );
 };

@@ -1,43 +1,117 @@
-import React from 'react'
-import QuizPage from './component/QuizPage'
-import { BrowserRouter as Router,Routes, Route } from 'react-router-dom'
-import LandingPage from './component/LandingPage'
-import SignInPage from './component/SignInPage'
-import Profile from './component/profile'
-import Settings from './component/settings'
-import HomePage from './component/HomePage'
-import Notes_Page from './component/Notes'
-import Chapter from './component/chapter'
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../firebase/firebase';
 
+import QuizPage from './component/QuizPage';
+import LandingPage from './component/LandingPage';
+import SignInPage from './component/SignInPage';
+import Profile from './component/profile';
+import Settings from './component/settings';
+import HomePage from './component/HomePage';
+import Notes_Page from './component/Notes';
+import Chapter from './component/chapter';
+import ThemesPage from './component/ThemesPage';
+import { useThemeStore } from './store/useThemeStore';
+
+// Protected Route component
+const ProtectedRoute = ({ user, children }) => {
+  if (!user) {
+    return <Navigate to="/signin" replace />;
+  }
+  return children;
+};
 
 const App = () => {
- return (  
-  <Router>   
-    <Routes>
-      {/* Route for your QuizPage */}
-     <Route path="/quiz/:subject" element={<QuizPage />} />
+  const { theme } = useThemeStore();
+  const [user, setUser] = useState(undefined); // undefined = loading
 
-      {/* Route for your LandingPage */}
-      <Route path="/HomePage" element={<HomePage />} />
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
-      <Route path="/" element={<LandingPage />} />
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
 
-      <Route path="/signin" element={<SignInPage/>}/>
+  if (user === undefined) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-base-200">
+        <span className="loading loading-spinner loading-lg"></span>
+      </div>
+    );
+  }
 
-      <Route path="/profile" element={<Profile/>}/>
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/signin" element={<SignInPage />} />
+        <Route path="/themes" element={<ThemesPage />} />
 
-      <Route path="/settings" element={<Settings/>}/>
-      <Route path="/notes" element={<Notes_Page/>}/>
-      <Route path="/chap/:subject" element={<Chapter/>}/>
-      <Route path="/notes/:examType" element={<Chapter />} />
-      
-    </Routes>
+        {/* Protected Routes */}
+        <Route 
+          path="/HomePage" 
+          element={
+            <ProtectedRoute user={user}>
+              <HomePage />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/profile" 
+          element={
+            <ProtectedRoute user={user}>
+              <Profile />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/settings" 
+          element={
+            <ProtectedRoute user={user}>
+              <Settings />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/notes" 
+          element={
+            <ProtectedRoute user={user}>
+              <Notes_Page />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/notes/:examType" 
+          element={
+            <ProtectedRoute user={user}>
+              <Chapter />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/quiz/:subject" 
+          element={
+            <ProtectedRoute user={user}>
+              <QuizPage />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/chap/:subject" 
+          element={
+            <ProtectedRoute user={user}>
+              <Chapter />
+            </ProtectedRoute>
+          } 
+        />
+      </Routes>
     </Router>
-
-    
-
   );
-}
+};
 
-
-export default App
+export default App;

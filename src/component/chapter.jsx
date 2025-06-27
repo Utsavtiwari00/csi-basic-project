@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const Chapter = () => { // Component name is now 'Chapter'
+const Chapter = () => {
   const { examType } = useParams();
   const navigate = useNavigate();
-  const [isLightMode, setIsLightMode] = useState(() => {
-    return localStorage.getItem("theme") === "light";
-  });
-
-  useEffect(() => {
-    localStorage.setItem("theme", isLightMode ? "light" : "dark");
-  }, [isLightMode]);
-
 
 const allChapters = {
   jee: [
@@ -230,49 +222,48 @@ const allChapters = {
   ],
 };
 
-  const chaptersForExam = allChapters[examType] || [];
+  const chaptersForExam = allChapters[examType?.toLowerCase()] || [];
 
   const handleDownload = (fileUrl) => {
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = fileUrl;
-    link.setAttribute('download', fileUrl.substring(fileUrl.lastIndexOf('/') + 1));
+    link.setAttribute("download", fileUrl.substring(fileUrl.lastIndexOf("/") + 1));
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    alert(`Downloading ${fileUrl.substring(fileUrl.lastIndexOf('/') + 1)}`);
   };
 
   return (
-    <div className={`min-h-screen ${isLightMode ? "bg-gray-100" : "bg-gray-900"} py-8`}>
+    <div className="min-h-screen bg-base-200 py-8">
       <div className="container mx-auto px-4">
-        <h1 className={`text-4xl font-bold mb-8 text-center ${isLightMode ? "text-gray-800" : "text-white"}`}>
-          {examType.toUpperCase()} Notes - Chapters
+        <h1 className="text-4xl font-bold mb-8 text-center text-base-content">
+          {examType?.toUpperCase()} Notes - Chapters
         </h1>
 
         {chaptersForExam.length === 0 ? (
-          <p className={`text-center ${isLightMode ? "text-gray-600" : "text-gray-400"}`}>
-            No chapters found for {examType.toUpperCase()}.
+          <div className="text-center space-y-4">
+            <p className="text-base-content/70">
+              No chapters found for {examType?.toUpperCase()}.
+            </p>
             <button
-              onClick={() => navigate('/notes')}
-              className={`ml-2 px-4 py-2 rounded ${isLightMode ? "bg-blue-500 text-white" : "bg-blue-700 text-white"}`}
+              onClick={() => navigate("/notes")}
+              className="btn btn-primary"
             >
               Go Back
             </button>
-          </p>
+          </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {chaptersForExam.map((chapter) => (
               <div
                 key={chapter.id}
                 onClick={() => handleDownload(chapter.file)}
-                className={`rounded-lg p-6 flex flex-col items-center justify-center text-center transition-colors duration-200 cursor-pointer shadow-md
-                  ${isLightMode
-                    ? "bg-white hover:bg-gray-200 text-black border border-gray-300"
-                    : "bg-gray-800 hover:bg-gray-700 text-white border border-gray-700"
-                  }`}
+                className="card cursor-pointer hover:shadow-xl transition-shadow duration-200 bg-base-100"
               >
-                <div className="text-xl font-semibold mb-2">{chapter.name}</div>
-                <p className={`${isLightMode ? "text-gray-600" : "text-gray-400"}`}>Click to Download</p>
+                <div className="card-body items-center text-center">
+                  <h2 className="card-title text-base-content">{chapter.name}</h2>
+                  <p className="text-base-content/60">Click to Download</p>
+                </div>
               </div>
             ))}
           </div>
@@ -282,4 +273,4 @@ const allChapters = {
   );
 };
 
-export default Chapter; 
+export default Chapter;
