@@ -13,8 +13,9 @@ import Notes_Page from './component/Notes';
 import Chapter from './component/chapter';
 import ThemesPage from './component/ThemesPage';
 import { useThemeStore } from './store/useThemeStore';
+import TestPage from './component/testPage';
+import Test from './component/test';
 
-// Protected Route component
 const ProtectedRoute = ({ user, children }) => {
   if (!user) {
     return <Navigate to="/signin" replace />;
@@ -24,7 +25,7 @@ const ProtectedRoute = ({ user, children }) => {
 
 const App = () => {
   const { theme } = useThemeStore();
-  const [user, setUser] = useState(undefined); // undefined = loading
+  const [user, setUser] = useState(undefined);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -52,62 +53,77 @@ const App = () => {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/themes" element={<ThemesPage />} />
 
-        {/* Protected Routes */}
-        <Route 
-          path="/HomePage" 
+        <Route
+          path="/HomePage"
           element={
             <ProtectedRoute user={user}>
               <HomePage />
             </ProtectedRoute>
-          } 
+          }
         />
-        <Route 
-          path="/profile" 
+        <Route
+          path="/Test"
+          element={
+            <ProtectedRoute user={user}>
+              <TestPage/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
           element={
             <ProtectedRoute user={user}>
               <Profile />
             </ProtectedRoute>
-          } 
+          }
         />
-        <Route 
-          path="/settings" 
+        <Route
+          path="/settings"
           element={
             <ProtectedRoute user={user}>
               <Settings />
             </ProtectedRoute>
-          } 
+          }
         />
-        <Route 
-          path="/notes" 
+        <Route
+          path="/notes"
           element={
             <ProtectedRoute user={user}>
               <Notes_Page />
             </ProtectedRoute>
-          } 
+          }
         />
-        <Route 
-          path="/notes/:examType" 
+        <Route
+          path="/notes/:examType"
           element={
             <ProtectedRoute user={user}>
               <Chapter />
             </ProtectedRoute>
-          } 
+          }
         />
-        <Route 
-          path="/quiz/:subject" 
+        <Route
+          path="/quiz/:subject"
           element={
             <ProtectedRoute user={user}>
               <QuizPage />
             </ProtectedRoute>
-          } 
+          }
         />
-        <Route 
-          path="/chap/:subject" 
+        <Route
+          path="/testlink/:stream"
+          element={
+            <ProtectedRoute user={user}>
+              <Test />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/chap/:subject"
           element={
             <ProtectedRoute user={user}>
               <Chapter />
             </ProtectedRoute>
-          } 
+          }
         />
       </Routes>
     </Router>

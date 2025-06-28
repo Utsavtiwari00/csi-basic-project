@@ -24,6 +24,11 @@ const Sidebar = ({ displayName, onShowProfile, onLogout }) => {
     navigate('/HomePage');
   };
 
+  const toTest = ()=>
+  {
+    navigate('/Test');
+  }
+
   const toggleTheme = () => {
     const currentIndex = ['light', 'dark'].indexOf(theme);
     const nextTheme = currentIndex === 0 ? 'dark' : 'light';
@@ -41,7 +46,7 @@ const Sidebar = ({ displayName, onShowProfile, onLogout }) => {
           >
             <Home className="w-5 h-5" /> Home
           </button>
-          <button className="flex items-center gap-3 text-base-content/60 hover:text-primary transition-colors">
+          <button className="flex items-center gap-3 text-base-content/60 hover:text-primary transition-colors" onClick={toTest}>
             <ClipboardList className="w-5 h-5" /> Tests
           </button>
           <button
