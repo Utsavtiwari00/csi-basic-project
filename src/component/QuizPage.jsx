@@ -197,7 +197,7 @@ const QuizPage = () => {
                   Retake Quiz
                 </button>
                 <button
-                  onClick={() => navigate("/HomePage")}
+                  onClick={() => navigate("/home")}
                   className="btn btn-secondary"
                 >
                   Home
@@ -275,7 +275,7 @@ const QuizPage = () => {
 
               <div className="card-actions justify-between mt-8">
                 <button
-                  onClick={() => navigate("/HomePage")}
+                  onClick={() => navigate("/home")}
                   className="btn btn-error"
                 >
                   Exit Quiz

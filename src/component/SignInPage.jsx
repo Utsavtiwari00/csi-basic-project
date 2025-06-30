@@ -23,7 +23,7 @@ const SignInPage = () => {
       } else {
         await signInWithEmailAndPassword(auth, email, password);
       }
-      navigate("/HomePage");
+      navigate("/home");
     } catch (err) {
       console.error("Auth Error:", err);
       setError(err.message || "Something went wrong.");

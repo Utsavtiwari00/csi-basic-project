@@ -103,7 +103,7 @@ const Settings = () => {
 
       setTimeout(() => {
         setMessage("");
-        navigate("/HomePage");
+        navigate("/home");
       }, 1000);
     } catch (error) {
       alert("Failed to update settings. Try again.");

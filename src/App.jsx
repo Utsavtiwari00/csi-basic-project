@@ -15,6 +15,7 @@ import ThemesPage from './component/ThemesPage';
 import { useThemeStore } from './store/useThemeStore';
 import TestPage from './component/testPage';
 import Test from './component/test';
+import Analysis from './component/Analysis';
 
 const ProtectedRoute = ({ user, children }) => {
   if (!user) {
@@ -54,7 +55,7 @@ const App = () => {
         <Route path="/themes" element={<ThemesPage />} />
 
         <Route
-          path="/HomePage"
+          path="/home"
           element={
             <ProtectedRoute user={user}>
               <HomePage />
@@ -114,6 +115,14 @@ const App = () => {
           element={
             <ProtectedRoute user={user}>
               <Test />
+            </ProtectedRoute>
+          }
+        />
+         <Route
+          path="/analysis"
+          element={
+            <ProtectedRoute user={user}>
+              <Analysis/>
             </ProtectedRoute>
           }
         />

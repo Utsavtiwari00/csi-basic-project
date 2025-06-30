@@ -21,7 +21,7 @@ const Sidebar = ({ displayName, onShowProfile, onLogout }) => {
   };
   
   const toHome = () => {
-    navigate('/HomePage');
+    navigate('/home');
   };
 
   const toTest = ()=>
